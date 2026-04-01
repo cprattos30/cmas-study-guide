@@ -24,8 +24,24 @@
     pdfPath: '../CAMS Study Guide.pdf'
   };
 
-  const EXAM_DATE = new Date('2026-05-01T09:00:00');
-  const START_DATE = new Date('2026-03-31');
+  const EXAM_DATE = new Date('2026-05-01T09:00:00-04:00');
+
+  // Get today's date as YYYY-MM-DD in Eastern time
+  function getEasternToday() {
+    const parts = new Intl.DateTimeFormat('en-CA', {
+      timeZone: 'America/New_York', year: 'numeric', month: '2-digit', day: '2-digit'
+    }).format(new Date());
+    // returns YYYY-MM-DD
+    return parts;
+  }
+
+  // Compute which study plan day number it is (Day 1 = March 31, 2026)
+  function getStudyDayNumber() {
+    const todayStr = getEasternToday(); // "2026-03-31"
+    const today = new Date(todayStr + 'T00:00:00');
+    const start = new Date('2026-03-31T00:00:00');
+    return Math.floor((today - start) / (1000 * 60 * 60 * 24)) + 1;
+  }
   const GUIDES = [
     { file: '01-Risks-and-Methods-of-ML-TF.md', name: 'Domain I: Risks & Methods', domain: 'I' },
     { file: '02-International-AML-CFT-Standards.md', name: 'Domain II: International Standards', domain: 'II' },
@@ -80,7 +96,7 @@
   // COUNTDOWN
   // ==========================================
   function updateCountdown() {
-    const now = new Date();
+    const now = getEasternDate();
     const diff = EXAM_DATE - now;
     const days = Math.ceil(diff / (1000 * 60 * 60 * 24));
 
@@ -113,6 +129,15 @@
     }
     if (welcomeEl) {
       welcomeEl.textContent = days > 0 ? days + ' days' : text;
+    }
+
+    // Update current date display (Eastern time)
+    const dateEl = document.getElementById('current-date');
+    if (dateEl) {
+      dateEl.textContent = now.toLocaleDateString('en-US', {
+        weekday: 'short', month: 'short', day: 'numeric',
+        timeZone: 'America/New_York'
+      });
     }
   }
 
@@ -503,7 +528,7 @@
     if (!state.studyPlanData) return;
 
     const container = document.getElementById('plan-days');
-    const now = new Date();
+    const now = getEasternDate();
     const todayDay = Math.ceil((now - START_DATE) / (1000 * 60 * 60 * 24));
     let currentWeek = '';
     let html = '';
@@ -559,16 +584,25 @@
       taskEl.closest('.plan-task').classList.toggle('completed', checked);
     }
 
-    // Check if the day is now fully complete -> show encouragement
-    if (checked && state.studyPlanData) {
-      const dayMatch = taskId.match(/^day(\d+)_/);
-      if (dayMatch) {
-        const dayNum = parseInt(dayMatch[1], 10);
-        const dayData = state.studyPlanData.days.find(d => d.day === dayNum);
-        if (dayData) {
-          const allDone = dayData.tasks.every(t => state.planProgress[t.id]);
+    // Update the day header counter (X/Y)
+    const dayMatch = taskId.match(/^day(\d+)_/);
+    if (dayMatch && state.studyPlanData) {
+      const dayNum = parseInt(dayMatch[1], 10);
+      const dayData = state.studyPlanData.days.find(d => d.day === dayNum);
+      if (dayData) {
+        const completedTasks = dayData.tasks.filter(t => state.planProgress[t.id]).length;
+        const totalTasks = dayData.tasks.length;
+        const allDone = completedTasks === totalTasks && totalTasks > 0;
+        const dayEl = document.querySelector(`.plan-day[data-day="${dayNum}"]`);
+        if (dayEl) {
+          const metaSpan = dayEl.querySelector('.plan-day-meta span:last-child');
+          if (metaSpan) metaSpan.innerHTML = `${completedTasks}/${totalTasks} ${allDone ? '&#10003;' : ''}`;
+        }
+
+        // Check if the day is now fully complete -> show encouragement
+        if (checked && allDone) {
           const msgKey = 'cams-day-msg-' + dayNum;
-          if (allDone && !sessionStorage.getItem(msgKey)) {
+          if (!sessionStorage.getItem(msgKey)) {
             sessionStorage.setItem(msgKey, 'true');
             showEncouragement(dayNum);
           }
@@ -817,17 +851,10 @@
       return;
     }
 
-    const mainEl = document.getElementById('content');
     const panel = document.getElementById('pdf-panel');
     const iframe = document.getElementById('pdf-iframe');
     const title = document.getElementById('pdf-panel-title');
     const contextEl = document.getElementById('pdf-context');
-
-    // Save scroll position BEFORE layout changes so we can restore it
-    const scrollBefore = mainEl.scrollTop;
-    // Find the clicked element's position relative to viewport
-    const clickedRef = document.querySelector(`.page-ref-link[data-page="${pageNum}"]`);
-    const clickedRect = clickedRef ? clickedRef.getBoundingClientRect() : null;
 
     // Convert study guide page number to physical PDF page number
     const physicalPage = pageNum + PDF_PAGE_OFFSET;
@@ -849,20 +876,10 @@
       iframe.src = state.pdfPath + '#page=' + physicalPage;
     });
 
-    const wasAlreadyOpen = panel.classList.contains('open');
     panel.classList.add('open');
     document.body.classList.add('pdf-open');
-
-    // Restore scroll position so the clicked bullet stays in view
-    // The margin-right change shifts layout and causes a scroll jump
-    if (!wasAlreadyOpen && clickedRect) {
-      requestAnimationFrame(() => {
-        // After layout settles, scroll so the clicked element is at the same viewport Y
-        const newRect = clickedRef.getBoundingClientRect();
-        const drift = newRect.top - clickedRect.top;
-        mainEl.scrollTop = mainEl.scrollTop + drift;
-      });
-    }
+    // No scroll restoration needed -- we only constrain max-width via CSS,
+    // which doesn't reflow already-shorter lines so scroll position is stable.
   }
 
   function closePdfPanel() {

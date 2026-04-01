@@ -148,6 +148,13 @@ body {
   gap: 16px;
 }
 
+#current-date {
+  font-size: 13px;
+  font-weight: 500;
+  white-space: nowrap;
+  opacity: 0.85;
+}
+
 #exam-countdown {
   font-size: 13px;
   font-weight: 600;
@@ -790,25 +797,23 @@ main.expanded { margin-left: 0; }
   border: none;
 }
 
-/* Main content transition for smooth PDF panel open/close */
-main {
-  transition: margin-right 0.3s ease;
-  margin-right: 0;
-}
-
 .glossary-pdf-link {
   font-size: 11px !important;
   padding: 1px 6px !important;
 }
 
-/* When PDF panel is open, shrink main content so text is not hidden behind the panel */
-body.pdf-open main {
-  margin-right: 50vw;
-  transition: margin-right 0.3s ease;
-}
-
-body.pdf-open #guide-content {
-  max-width: 100%;
+/* When PDF panel is open:
+   Do NOT change margin, padding, or width on main -- that causes text reflow
+   and scroll position jumps. Instead, only constrain guide-content's max-width
+   so text stays within the visible half. Lines already shorter than the new
+   max-width won't reflow at all; only lines that would extend behind the panel
+   will wrap, which is exactly the desired behavior. */
+body.pdf-open #guide-content,
+body.pdf-open #glossary-view,
+body.pdf-open #flashcard-view,
+body.pdf-open #plan-view,
+body.pdf-open #welcome {
+  max-width: calc(50vw - var(--sidebar-width) - 48px);
 }
 
 /* Clickable page reference links */
@@ -935,7 +940,11 @@ body.pdf-open #guide-content {
 /* ===== RESPONSIVE PDF ===== */
 @media (max-width: 1024px) {
   .pdf-panel { width: 100vw; }
-  body.pdf-open main { width: 100vw; }
+  body.pdf-open #guide-content,
+  body.pdf-open #glossary-view,
+  body.pdf-open #flashcard-view,
+  body.pdf-open #plan-view,
+  body.pdf-open #welcome { max-width: 100%; }
 }
 
 /* ===== SCROLLBAR ===== */
