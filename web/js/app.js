@@ -778,6 +778,24 @@
     // Escape key closes panel
     document.addEventListener('keydown', e => {
       if (e.key === 'Escape') closePdfPanel();
+
+      // When PDF panel is open and user presses Ctrl/Cmd+F,
+      // focus the PDF iframe so browser search targets the PDF
+      if ((e.ctrlKey || e.metaKey) && e.key === 'f') {
+        const panel = document.getElementById('pdf-panel');
+        if (panel.classList.contains('open')) {
+          e.preventDefault();
+          const iframe = document.getElementById('pdf-iframe');
+          iframe.focus();
+          // Trigger find in the iframe by re-dispatching the keystroke
+          // Note: Most browsers will open their find bar for the focused iframe
+          try {
+            iframe.contentWindow.focus();
+          } catch (err) {
+            // Cross-origin restriction -- iframe focus is best-effort
+          }
+        }
+      }
     });
 
     // Setup modal dismiss
@@ -793,25 +811,58 @@
   // before the content starts. Study guide "Page 1" = physical PDF page 13.
   const PDF_PAGE_OFFSET = 12;
 
-  function openPdfToPage(pageNum) {
+  function openPdfToPage(pageNum, contextText) {
     if (!state.pdfAvailable) {
       document.getElementById('pdf-setup-modal').classList.remove('hidden');
       return;
     }
 
+    const mainEl = document.getElementById('content');
     const panel = document.getElementById('pdf-panel');
     const iframe = document.getElementById('pdf-iframe');
     const title = document.getElementById('pdf-panel-title');
+    const contextEl = document.getElementById('pdf-context');
+
+    // Save scroll position BEFORE layout changes so we can restore it
+    const scrollBefore = mainEl.scrollTop;
+    // Find the clicked element's position relative to viewport
+    const clickedRef = document.querySelector(`.page-ref-link[data-page="${pageNum}"]`);
+    const clickedRect = clickedRef ? clickedRef.getBoundingClientRect() : null;
 
     // Convert study guide page number to physical PDF page number
     const physicalPage = pageNum + PDF_PAGE_OFFSET;
     title.textContent = 'CAMS Study Guide \u2014 Page ' + pageNum;
 
-    // The #page=N parameter works in Chrome/Safari/Firefox built-in PDF viewers
-    iframe.src = state.pdfPath + '#page=' + physicalPage;
+    // Show context banner telling Kevin what to look for on this page
+    if (contextText) {
+      contextEl.textContent = '\uD83D\uDD0D Look for: ' + contextText;
+      contextEl.style.display = 'block';
+    } else {
+      contextEl.style.display = 'none';
+    }
 
+    // Force iframe reload even if navigating to a different page of the same PDF.
+    // Browsers cache the PDF blob and ignore #page changes on same src base.
+    // Setting src to blank first, then to the target in a microtask, forces a true reload.
+    iframe.src = 'about:blank';
+    requestAnimationFrame(() => {
+      iframe.src = state.pdfPath + '#page=' + physicalPage;
+    });
+
+    const wasAlreadyOpen = panel.classList.contains('open');
     panel.classList.add('open');
     document.body.classList.add('pdf-open');
+
+    // Restore scroll position so the clicked bullet stays in view
+    // The margin-right change shifts layout and causes a scroll jump
+    if (!wasAlreadyOpen && clickedRect) {
+      requestAnimationFrame(() => {
+        // After layout settles, scroll so the clicked element is at the same viewport Y
+        const newRect = clickedRef.getBoundingClientRect();
+        const drift = newRect.top - clickedRect.top;
+        mainEl.scrollTop = mainEl.scrollTop + drift;
+      });
+    }
   }
 
   function closePdfPanel() {
@@ -845,6 +896,19 @@
       const match = text.match(/^\(pp?\.\s*(\d+)(?:\s*[-,]\s*\d+)*\)$/);
       if (match) {
         const pageNum = parseInt(match[1], 10);
+
+        // Extract context: the heading or list item text surrounding this reference
+        let contextText = '';
+        const parent = em.closest('li, h2, h3, h4, p');
+        if (parent) {
+          // Get the text content without the page ref itself, trimmed
+          contextText = parent.textContent
+            .replace(/\(pp?\.\s*\d+[\d, -]*\)/g, '')
+            .replace(/\s+/g, ' ')
+            .trim()
+            .substring(0, 120);
+        }
+
         const link = document.createElement('span');
         link.className = 'page-ref-link' + (state.pdfAvailable ? '' : ' no-pdf');
         link.textContent = text;
@@ -852,11 +916,12 @@
           ? 'Click to open PDF at page ' + pageNum
           : 'PDF not found -- drop CAMS Study Guide.pdf into the cmas-study-guide folder to enable';
         link.setAttribute('data-page', pageNum);
+        link.setAttribute('data-context', contextText);
 
         link.addEventListener('click', e => {
           e.preventDefault();
           e.stopPropagation();
-          openPdfToPage(pageNum);
+          openPdfToPage(pageNum, contextText);
         });
 
         em.replaceWith(link);
