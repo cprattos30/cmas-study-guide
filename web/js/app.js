@@ -296,19 +296,46 @@
     document.getElementById('glossary-count').textContent = `Showing ${items.length} items`;
 
     const container = document.getElementById('glossary-table');
-    container.innerHTML = items.map(i => `
-      <div class="glossary-item">
-        <div class="glossary-item-header">
-          <span class="glossary-term">${escapeHtml(i.term)}</span>
+    container.innerHTML = items.map(i => {
+      // Find PDF page for this term
+      let pdfPage = TERM_TO_PAGE[i.term] || null;
+      // For FATF recs, extract the recommendation number
+      if (!pdfPage && i.type === 'fatf') {
+        const recMatch = i.term.match(/^R\.(\d+)/);
+        if (recMatch) pdfPage = FATF_REC_TO_PAGE[parseInt(recMatch[1], 10)] || null;
+      }
+      // For acronyms, try looking up by full name pattern
+      if (!pdfPage && i.type === 'acronym') {
+        for (const [key, page] of Object.entries(TERM_TO_PAGE)) {
+          if (key.includes(i.term)) { pdfPage = page; break; }
+        }
+      }
+      const pdfBtn = pdfPage && state.pdfAvailable
+        ? `<span class="page-ref-link glossary-pdf-link" data-page="${pdfPage}" title="View in PDF (p. ${pdfPage})">p. ${pdfPage}</span>`
+        : (pdfPage ? `<span class="tag tag-domain" style="font-size:10px">p. ${pdfPage}</span>` : '');
+      return `
+        <div class="glossary-item">
+          <div class="glossary-item-header">
+            <span class="glossary-term">${escapeHtml(i.term)}</span>
+            ${pdfBtn}
+          </div>
+          <div class="glossary-def">${marked.parseInline(i.def)}</div>
+          <div class="glossary-tags">
+            ${i.domain ? `<span class="tag tag-domain">Domain ${escapeHtml(i.domain)}</span>` : ''}
+            ${i.key === 'YES' ? '<span class="tag tag-key">Key Exam</span>' : ''}
+            ${i.extra ? `<span class="tag tag-fatf">${escapeHtml(i.extra)}</span>` : ''}
+          </div>
         </div>
-        <div class="glossary-def">${marked.parseInline(i.def)}</div>
-        <div class="glossary-tags">
-          ${i.domain ? `<span class="tag tag-domain">Domain ${escapeHtml(i.domain)}</span>` : ''}
-          ${i.key === 'YES' ? '<span class="tag tag-key">Key Exam</span>' : ''}
-          ${i.extra ? `<span class="tag tag-fatf">${escapeHtml(i.extra)}</span>` : ''}
-        </div>
-      </div>
-    `).join('');
+      `;
+    }).join('');
+
+    // Attach click handlers for glossary PDF links
+    container.querySelectorAll('.glossary-pdf-link').forEach(link => {
+      link.addEventListener('click', e => {
+        e.stopPropagation();
+        openPdfToPage(parseInt(link.dataset.page, 10));
+      });
+    });
 
     // Set up filter listeners (only once)
     if (!state._glossaryListenersSet) {
@@ -427,7 +454,19 @@
     document.querySelector('.flashcard-term').textContent = item.term;
     document.querySelector('.flashcard-hint').textContent = 'Click to reveal';
     document.querySelector('.flashcard-definition').textContent = item.def;
-    document.querySelector('.flashcard-meta').textContent = item.meta;
+
+    // Show PDF page link on flashcard back if available
+    const pdfPage = TERM_TO_PAGE[item.term];
+    const metaEl = document.querySelector('.flashcard-meta');
+    if (pdfPage && state.pdfAvailable) {
+      metaEl.innerHTML = `${escapeHtml(item.meta)} &middot; <span class="page-ref-link" data-page="${pdfPage}" style="cursor:pointer">View in PDF (p. ${pdfPage})</span>`;
+      metaEl.querySelector('.page-ref-link').addEventListener('click', e => {
+        e.stopPropagation();
+        openPdfToPage(pdfPage);
+      });
+    } else {
+      metaEl.textContent = item.meta + (pdfPage ? ` \u00b7 p. ${pdfPage}` : '');
+    }
     document.getElementById('flashcard-progress').textContent = `${state.flashcardIdx + 1} / ${deck.length}`;
 
     updateFlashcardStats();
@@ -520,9 +559,43 @@
       taskEl.closest('.plan-task').classList.toggle('completed', checked);
     }
 
+    // Check if the day is now fully complete -> show encouragement
+    if (checked && state.studyPlanData) {
+      const dayMatch = taskId.match(/^day(\d+)_/);
+      if (dayMatch) {
+        const dayNum = parseInt(dayMatch[1], 10);
+        const dayData = state.studyPlanData.days.find(d => d.day === dayNum);
+        if (dayData) {
+          const allDone = dayData.tasks.every(t => state.planProgress[t.id]);
+          const msgKey = 'cams-day-msg-' + dayNum;
+          if (allDone && !sessionStorage.getItem(msgKey)) {
+            sessionStorage.setItem(msgKey, 'true');
+            showEncouragement(dayNum);
+          }
+        }
+      }
+    }
+
     updatePlanProgress();
     updateWelcomeProgress();
   };
+
+  function showEncouragement(dayNum) {
+    const msg = KEVIN_MESSAGES[dayNum - 1] || 'Another day conquered, Kevin! Keep going!';
+    const modal = document.createElement('div');
+    modal.className = 'modal';
+    modal.innerHTML = `
+      <div class="modal-content" style="text-align:center">
+        <div style="font-size:48px;margin-bottom:16px">${dayNum === 31 ? '\uD83C\uDF1F\uD83C\uDFC6\uD83C\uDF1F' : '\uD83C\uDF89'}</div>
+        <h3 style="color:var(--success)">Day ${dayNum} Complete!</h3>
+        <p style="font-size:16px;line-height:1.6;margin-top:12px">${escapeHtml(msg)}</p>
+        <div class="modal-buttons" style="justify-content:center;margin-top:20px">
+          <button class="modal-btn" onclick="this.closest('.modal').remove()">Let's go!</button>
+        </div>
+      </div>
+    `;
+    document.body.appendChild(modal);
+  }
 
   function updatePlanProgress() {
     if (!state.studyPlanData) return;
@@ -702,9 +775,6 @@
     // Close button
     document.getElementById('pdf-panel-close').addEventListener('click', closePdfPanel);
 
-    // Overlay click closes panel
-    document.getElementById('pdf-panel-overlay').addEventListener('click', closePdfPanel);
-
     // Escape key closes panel
     document.addEventListener('keydown', e => {
       if (e.key === 'Escape') closePdfPanel();
@@ -719,9 +789,12 @@
     });
   }
 
+  // The PDF has 12 front-matter pages (cover, credits, copyright, TOC)
+  // before the content starts. Study guide "Page 1" = physical PDF page 13.
+  const PDF_PAGE_OFFSET = 12;
+
   function openPdfToPage(pageNum) {
     if (!state.pdfAvailable) {
-      // Show setup modal
       document.getElementById('pdf-setup-modal').classList.remove('hidden');
       return;
     }
@@ -729,25 +802,22 @@
     const panel = document.getElementById('pdf-panel');
     const iframe = document.getElementById('pdf-iframe');
     const title = document.getElementById('pdf-panel-title');
-    const overlay = document.getElementById('pdf-panel-overlay');
 
-    title.textContent = 'CAMS Study Guide -- Page ' + pageNum;
+    // Convert study guide page number to physical PDF page number
+    const physicalPage = pageNum + PDF_PAGE_OFFSET;
+    title.textContent = 'CAMS Study Guide \u2014 Page ' + pageNum;
 
-    // Load PDF at specific page
     // The #page=N parameter works in Chrome/Safari/Firefox built-in PDF viewers
-    iframe.src = state.pdfPath + '#page=' + pageNum;
+    iframe.src = state.pdfPath + '#page=' + physicalPage;
 
     panel.classList.add('open');
-    overlay.classList.remove('hidden');
     document.body.classList.add('pdf-open');
   }
 
   function closePdfPanel() {
     const panel = document.getElementById('pdf-panel');
-    const overlay = document.getElementById('pdf-panel-overlay');
 
     panel.classList.remove('open');
-    overlay.classList.add('hidden');
     document.body.classList.remove('pdf-open');
 
     // Clear iframe after transition to free memory
@@ -793,6 +863,102 @@
       }
     });
   }
+
+  // ==========================================
+  // GLOSSARY PDF PAGE MAPPING
+  // ==========================================
+  // Maps key glossary terms to the study guide page where they are primarily discussed
+  const TERM_TO_PAGE = {
+    'Money Laundering': 3, 'Predicate Offense': 3, 'Placement': 5, 'Layering': 5,
+    'Integration': 6, 'Terrorist Financing (TF)': 133, 'Structuring (Smurfing)': 39,
+    'Microstructuring': 43, 'Correspondent Banking': 25, 'Respondent Bank': 25,
+    'Payable-Through Account (PTA)': 29, 'Nested Account': 25, 'Concentration Account': 31,
+    'Private Banking': 32, 'Politically Exposed Person (PEP)': 37,
+    'Shell Company': 127, 'Shelf Company': 127, 'Beneficial Owner': 125,
+    'Money Services Business (MSB)': 50, 'Hawala': 138,
+    'Informal Value Transfer System (IVTS)': 138, 'Trade-Based Money Laundering (TBML)': 102,
+    'Black Market Peso Exchange (BMPE)': 107, 'Free Trade Zone (FTZ)': 101,
+    'Gatekeeper': 85, 'Trust and Company Service Provider (TCSP)': 94,
+    'Virtual Currency / Virtual Asset': 118, 'Virtual Asset Service Provider (VASP)': 118,
+    'Prepaid Card': 113, 'Non-Profit Organization (NPO)': 142, 'Willful Blindness': 4,
+    'Wildlife Trafficking': 111,
+    'Financial Action Task Force (FATF)': 153, 'FATF 40 Recommendations': 158,
+    'FATF Interpretive Notes': 158, 'Risk-Based Approach (RBA)': 245,
+    'Mutual Evaluation': 154, 'FATF Grey List': 172, 'FATF Black List': 172,
+    'FATF-Style Regional Body (FSRB)': 202,
+    'Basel Committee on Banking Supervision': 176, 'European Union AML Directives': 190,
+    'Egmont Group': 215, 'Wolfsberg Group': 218,
+    'USA PATRIOT Act': 226, 'Section 311 (PATRIOT Act)': 228,
+    'Section 312 (PATRIOT Act)': 229, 'Section 314(a)': 232, 'Section 314(b)': 232,
+    'Section 326 (PATRIOT Act)': 233, 'Anti-Money Laundering Act of 2020 (AMLA)': 234,
+    'Bank Secrecy Act (BSA)': 226, 'Office of Foreign Assets Control (OFAC)': 242,
+    'SDN List': 242, '50% Rule (OFAC)': 242,
+    'Designated Non-Financial Businesses and Professions (DNFBPs)': 85,
+    'FinCEN': 388,
+    'Customer Due Diligence (CDD)': 296, 'Enhanced Due Diligence (EDD)': 299,
+    'Simplified Due Diligence (SDD)': 296, 'Know Your Customer (KYC)': 296,
+    'Know Your Employee (KYE)': 315, 'Customer Identification Program (CIP)': 301,
+    'Suspicious Activity Report (SAR)': 367, 'Currency Transaction Report (CTR)': 39,
+    'Tipping Off': 367, 'Safe Harbor': 367, 'Compliance Officer': 270,
+    'Independent Audit / Independent Testing': 285, 'AML/CFT Training': 278,
+    'Culture of Compliance': 289, 'Transaction Monitoring': 319,
+    'Sanctions Screening': 313, 'PEP Screening': 314, 'Risk Scoring': 250,
+    'Four/Five Pillars of AML Program': 261, 'Red Flags': 325,
+    'De-risking': 296, 'Wire Transfer / Travel Rule': 329,
+    'Suspicious Transaction Report (STR)': 367, 'Financial Intelligence Unit (FIU)': 386,
+    'Mutual Legal Assistance Treaty (MLAT)': 385, 'SHERLOC': 384,
+    'Account Closure': 372,
+    'Proliferation Financing': 158, 'Targeted Financial Sanctions (TFS)': 158,
+    'Travel Rule': 158, 'Record Keeping': 158,
+    'Extraterritorial Jurisdiction': 239
+  };
+
+  // Maps FATF Recommendation numbers to their primary PDF page
+  const FATF_REC_TO_PAGE = {
+    1: 158, 2: 158, 3: 158, 4: 158, 5: 159, 6: 159, 7: 159, 8: 159,
+    9: 160, 10: 160, 11: 161, 12: 161, 13: 161, 14: 162, 15: 162,
+    16: 163, 17: 163, 18: 163, 19: 164, 20: 164, 21: 164, 22: 165,
+    23: 165, 24: 166, 25: 166, 26: 166, 27: 167, 28: 167, 29: 167,
+    30: 167, 31: 167, 32: 168, 33: 168, 34: 168, 35: 168,
+    36: 384, 37: 384, 38: 384, 39: 384, 40: 384
+  };
+
+  // ==========================================
+  // KEVIN'S DAILY ENCOURAGEMENT
+  // ==========================================
+  const KEVIN_MESSAGES = [
+    "Day 1 done, Kevin! The journey of a thousand miles starts with a single step. You just took it.",
+    "Day 2 in the books! You now know more about ML than 99% of people on the planet. Keep building.",
+    "3 days down, Kevin! Banks, wire transfers, correspondent accounts -- you're speaking the language now.",
+    "Day 4 complete! Nonbank FIs and casinos -- you're seeing how deep the rabbit hole goes. Stay sharp.",
+    "Friday grind complete! Gatekeepers, real estate, trade -- you're covering serious ground, Kevin.",
+    "Saturday study session done! Virtual currency, shell companies -- you're ahead of schedule. Respect.",
+    "Week 1 COMPLETE! You've conquered Domain I. Terrorist financing, hawala, the works. You're built different, Kevin.",
+    "Day 8 done! FATF foundations locked in. You're thinking like a global AML professional now.",
+    "FATF deep dive Part 1 -- done! R.1, R.10, R.12 -- these are the heavy hitters and you nailed them, Kevin.",
+    "Day 10 complete! Travel Rule, SARs, beneficial ownership -- the interpretive notes are clicking. Keep going.",
+    "Basel Committee and EU Directives down! Kevin, you just covered 30+ years of international AML history in one day.",
+    "FSRBs and Egmont Group -- done! You can name more AML bodies than most compliance officers. Seriously.",
+    "US law day complete! PATRIOT Act, AMLA 2020, OFAC -- you're dangerous now, Kevin. In the best way.",
+    "Week 2 COMPLETE! Domain II conquered. International standards are your playground. Time to build on it.",
+    "Day 15: Risk assessment mastered! You understand why RBA beats checklists every time. The exam loves this, Kevin.",
+    "Program elements locked in! Four pillars, compliance officer duties, training -- the backbone of every AML program. Strong work.",
+    "Day 17 done! Training, audit, culture of compliance -- you know what separates good programs from great ones.",
+    "KYC day complete! CDD, EDD, SDD -- you know exactly when each applies. Examiners love testing this, and you're ready.",
+    "Monitoring and screening -- done! Sanctions, PEPs, transaction monitoring. You're thinking like a compliance officer now, Kevin.",
+    "RED FLAGS Part 1 -- CRUSHED! This is the most tested material on the exam and you're eating it alive.",
+    "RED FLAGS Part 2 -- DONE! Kevin, you just studied the single highest-yield section of the entire exam. Week 3 complete. Absolute warrior.",
+    "Day 22: Internal investigations mastered! SAR decision-making, evidence gathering -- you know the playbook now.",
+    "SARs, account closures, 314(a)/314(b) -- locked in! Day 23 down. You're in the home stretch, Kevin.",
+    "Day 24: Law enforcement cooperation, FIUs, MLATs -- the international picture is complete. Domain IV conquered!",
+    "Comprehensive review day 1 -- done! Going back through the material is when it really clicks. Feel that confidence growing.",
+    "Day 26: Second review pass complete. The connections between domains are becoming crystal clear now, Kevin.",
+    "Practice scenarios done! You're analyzing cases like a veteran. The exam throws scenarios -- and you're ready to catch them.",
+    "Day 28: Weak areas addressed. Every warrior has gaps -- the great ones fill them. That's you today, Kevin.",
+    "Day 29: Glossary review + high-yield review complete. The knowledge is locked in. You've done the work.",
+    "Day 30: Simulation day done! You've seen every question type, every trap, every scenario. Tomorrow is YOUR day, Kevin.",
+    "FINAL DAY BEFORE THE EXAM! Kevin Holzendorf, you put in 31 days of focused, disciplined work. You studied every domain, drilled every red flag, mastered every concept. Walk in tomorrow with confidence -- you've EARNED this. Go get that CAMS. We're all rooting for you!"
+  ];
 
   // ==========================================
   // UTILS

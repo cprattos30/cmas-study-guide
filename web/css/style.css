@@ -774,21 +774,25 @@ main.expanded { margin-left: 0; }
   border: none;
 }
 
-.pdf-panel-overlay {
-  position: fixed;
-  inset: 0;
-  z-index: 79;
+/* Main content transition for smooth PDF panel open/close */
+main {
+  transition: margin-right 0.3s ease;
+  margin-right: 0;
 }
 
-.pdf-panel-overlay.hidden { display: none; }
+.glossary-pdf-link {
+  font-size: 11px !important;
+  padding: 1px 6px !important;
+}
 
-/* When PDF panel is open, shrink main content */
+/* When PDF panel is open, shrink main content so text is not hidden behind the panel */
 body.pdf-open main {
-  width: 50vw;
+  margin-right: 50vw;
+  transition: margin-right 0.3s ease;
 }
 
-body.pdf-open #sidebar {
-  width: min(var(--sidebar-width), 25vw);
+body.pdf-open #guide-content {
+  max-width: 100%;
 }
 
 /* Clickable page reference links */
