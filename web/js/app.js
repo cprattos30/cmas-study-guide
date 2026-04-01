@@ -96,7 +96,7 @@
   // COUNTDOWN
   // ==========================================
   function updateCountdown() {
-    const now = getEasternDate();
+    const now = new Date();
     const diff = EXAM_DATE - now;
     const days = Math.ceil(diff / (1000 * 60 * 60 * 24));
 
@@ -134,10 +134,10 @@
     // Update current date display (Eastern time)
     const dateEl = document.getElementById('current-date');
     if (dateEl) {
-      dateEl.textContent = now.toLocaleDateString('en-US', {
+      dateEl.textContent = new Intl.DateTimeFormat('en-US', {
         weekday: 'short', month: 'short', day: 'numeric',
         timeZone: 'America/New_York'
-      });
+      }).format(now);
     }
   }
 
@@ -528,8 +528,7 @@
     if (!state.studyPlanData) return;
 
     const container = document.getElementById('plan-days');
-    const now = getEasternDate();
-    const todayDay = Math.ceil((now - START_DATE) / (1000 * 60 * 60 * 24));
+    const todayDay = getStudyDayNumber();
     let currentWeek = '';
     let html = '';
 
