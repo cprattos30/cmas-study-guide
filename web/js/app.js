@@ -19,7 +19,9 @@
     planProgress: JSON.parse(localStorage.getItem('cams-plan-progress') || '{}'),
     currentView: 'welcome',
     currentGuide: null,
-    theme: localStorage.getItem('cams-theme') || 'light'
+    theme: localStorage.getItem('cams-theme') || 'light',
+    pdfAvailable: false,
+    pdfPath: '../CAMS Study Guide.pdf'
   };
 
   const EXAM_DATE = new Date('2026-05-01T09:00:00');
@@ -59,12 +61,16 @@
       }
     }
 
+    // Check if PDF is available
+    await checkPdfAvailability();
+
     // Set up event listeners
     setupNavigation();
     setupSearch();
     setupThemeToggle();
     setupSidebar();
     setupWelcome();
+    setupPdfPanel();
 
     // Show welcome
     showView('welcome');
@@ -209,7 +215,11 @@
 
     state.currentGuide = file;
     const html = marked.parse(md);
-    document.getElementById('guide-content').innerHTML = html;
+    const guideContent = document.getElementById('guide-content');
+    guideContent.innerHTML = html;
+
+    // Convert page references to clickable links
+    makePageRefsClickable(guideContent);
 
     // Build TOC from rendered headings
     buildTOC();
@@ -664,6 +674,123 @@
       const main = document.getElementById('content');
       sidebar.classList.toggle('collapsed');
       main.classList.toggle('expanded');
+    });
+  }
+
+  // ==========================================
+  // PDF VIEWER
+  // ==========================================
+  async function checkPdfAvailability() {
+    try {
+      const resp = await fetch(state.pdfPath, { method: 'HEAD' });
+      if (resp.ok && resp.headers.get('content-type')?.includes('pdf')) {
+        state.pdfAvailable = true;
+      } else {
+        state.pdfAvailable = false;
+      }
+    } catch (e) {
+      state.pdfAvailable = false;
+    }
+
+    // Show setup modal if PDF not found and user hasn't dismissed it
+    if (!state.pdfAvailable && !localStorage.getItem('cams-pdf-setup-dismissed')) {
+      document.getElementById('pdf-setup-modal').classList.remove('hidden');
+    }
+  }
+
+  function setupPdfPanel() {
+    // Close button
+    document.getElementById('pdf-panel-close').addEventListener('click', closePdfPanel);
+
+    // Overlay click closes panel
+    document.getElementById('pdf-panel-overlay').addEventListener('click', closePdfPanel);
+
+    // Escape key closes panel
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') closePdfPanel();
+    });
+
+    // Setup modal dismiss
+    document.getElementById('pdf-setup-dismiss').addEventListener('click', () => {
+      document.getElementById('pdf-setup-modal').classList.add('hidden');
+      if (document.getElementById('pdf-setup-noshow').checked) {
+        localStorage.setItem('cams-pdf-setup-dismissed', 'true');
+      }
+    });
+  }
+
+  function openPdfToPage(pageNum) {
+    if (!state.pdfAvailable) {
+      // Show setup modal
+      document.getElementById('pdf-setup-modal').classList.remove('hidden');
+      return;
+    }
+
+    const panel = document.getElementById('pdf-panel');
+    const iframe = document.getElementById('pdf-iframe');
+    const title = document.getElementById('pdf-panel-title');
+    const overlay = document.getElementById('pdf-panel-overlay');
+
+    title.textContent = 'CAMS Study Guide -- Page ' + pageNum;
+
+    // Load PDF at specific page
+    // The #page=N parameter works in Chrome/Safari/Firefox built-in PDF viewers
+    iframe.src = state.pdfPath + '#page=' + pageNum;
+
+    panel.classList.add('open');
+    overlay.classList.remove('hidden');
+    document.body.classList.add('pdf-open');
+  }
+
+  function closePdfPanel() {
+    const panel = document.getElementById('pdf-panel');
+    const overlay = document.getElementById('pdf-panel-overlay');
+
+    panel.classList.remove('open');
+    overlay.classList.add('hidden');
+    document.body.classList.remove('pdf-open');
+
+    // Clear iframe after transition to free memory
+    setTimeout(() => {
+      if (!panel.classList.contains('open')) {
+        document.getElementById('pdf-iframe').src = 'about:blank';
+      }
+    }, 350);
+  }
+
+  function makePageRefsClickable(container) {
+    // Find all <em> tags that contain page references like (p. XX) or (pp. XX-YY)
+    // The markdown renders *(p. 42)* as <em>(p. 42)</em>
+    const walker = document.createTreeWalker(container, NodeFilter.SHOW_ELEMENT);
+    const emTags = [];
+    while (walker.nextNode()) {
+      if (walker.currentNode.tagName === 'EM') {
+        emTags.push(walker.currentNode);
+      }
+    }
+
+    emTags.forEach(em => {
+      const text = em.textContent;
+      // Match patterns: (p. 42), (pp. 42-50), (p. 42, 45), (pp. 245-246)
+      const match = text.match(/^\(pp?\.\s*(\d+)(?:\s*[-,]\s*\d+)*\)$/);
+      if (match) {
+        const pageNum = parseInt(match[1], 10);
+        const link = document.createElement('span');
+        link.className = 'page-ref-link' + (state.pdfAvailable ? '' : ' no-pdf');
+        link.textContent = text;
+        link.title = state.pdfAvailable
+          ? 'Click to open PDF at page ' + pageNum
+          : 'PDF not found -- drop CAMS Study Guide.pdf into the cmas-study-guide folder to enable';
+        link.setAttribute('data-page', pageNum);
+
+        link.addEventListener('click', e => {
+          e.preventDefault();
+          e.stopPropagation();
+          openPdfToPage(pageNum);
+        });
+
+        em.replaceWith(link);
+      }
     });
   }
 

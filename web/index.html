@@ -162,6 +162,33 @@
     </div>
   </main>
 
+  <!-- PDF Viewer Panel -->
+  <div id="pdf-panel" class="pdf-panel">
+    <div class="pdf-panel-header">
+      <span id="pdf-panel-title">CAMS Study Guide</span>
+      <div class="pdf-panel-controls">
+        <button id="pdf-panel-close" aria-label="Close PDF panel">&times;</button>
+      </div>
+    </div>
+    <div id="pdf-panel-body">
+      <iframe id="pdf-iframe" src="about:blank"></iframe>
+    </div>
+  </div>
+  <div id="pdf-panel-overlay" class="pdf-panel-overlay hidden"></div>
+
+  <!-- PDF not found notice (shown once if PDF missing) -->
+  <div id="pdf-setup-modal" class="modal hidden">
+    <div class="modal-content">
+      <h3>PDF Setup</h3>
+      <p>To enable clickable page references, drop your <strong>CAMS Study Guide.pdf</strong> file into the <code>cmas-study-guide</code> folder (the same folder that contains the <code>web</code> and <code>study-guide</code> folders).</p>
+      <p>Once the PDF is in place, page references like <em>(p. 42)</em> become clickable and open the original study guide side-by-side.</p>
+      <div class="modal-buttons">
+        <button id="pdf-setup-dismiss" class="modal-btn">Got it</button>
+        <label class="modal-check"><input type="checkbox" id="pdf-setup-noshow"> Don't show again</label>
+      </div>
+    </div>
+  </div>
+
   <script src="lib/marked.min.js"></script>
   <script src="js/app.js"></script>
 </body>
