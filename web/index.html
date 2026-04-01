@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CAMS Study Guide</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header id="top-bar">
+    <div class="header-left">
+      <button id="sidebar-toggle" aria-label="Toggle sidebar">&#9776;</button>
+      <h1>CAMS Study Guide</h1>
+    </div>
+    <div class="header-center">
+      <div id="search-container">
+        <input type="text" id="global-search" placeholder="Search everything..." autocomplete="off">
+        <div id="search-results" class="hidden"></div>
+      </div>
+    </div>
+    <div class="header-right">
+      <div id="exam-countdown"></div>
+      <button id="theme-toggle" aria-label="Toggle dark mode">&#9790;</button>
+    </div>
+  </header>
+
+  <nav id="sidebar">
+    <div class="nav-section">
+      <h3>Study Guides</h3>
+      <a href="#" data-view="guide" data-file="01-Risks-and-Methods-of-ML-TF.md" class="nav-link">
+        <span class="domain-badge d1">I</span> Risks & Methods
+      </a>
+      <a href="#" data-view="guide" data-file="02-International-AML-CFT-Standards.md" class="nav-link">
+        <span class="domain-badge d2">II</span> International Standards
+      </a>
+      <a href="#" data-view="guide" data-file="03-AML-CFT-Compliance-Programs.md" class="nav-link">
+        <span class="domain-badge d3">III</span> Compliance Programs
+      </a>
+      <a href="#" data-view="guide" data-file="04-Conducting-Responding-Investigations.md" class="nav-link">
+        <span class="domain-badge d4">IV</span> Investigations
+      </a>
+      <a href="#" data-view="guide" data-file="05-FATF-Interpretive-Notes.md" class="nav-link">
+        <span class="domain-badge fatf">F</span> FATF Reference
+      </a>
+    </div>
+    <div class="nav-section">
+      <h3>Tools</h3>
+      <a href="#" data-view="glossary" class="nav-link">Glossary</a>
+      <a href="#" data-view="flashcards" class="nav-link">Flashcards</a>
+      <a href="#" data-view="plan" class="nav-link">Study Plan</a>
+    </div>
+    <div class="nav-section" id="toc-container">
+      <h3>On This Page</h3>
+      <div id="toc"></div>
+    </div>
+  </nav>
+
+  <main id="content">
+    <!-- Welcome screen -->
+    <div id="welcome" class="view active">
+      <div class="welcome-hero">
+        <h2>CAMS Exam Prep</h2>
+        <p class="subtitle">Certified Anti-Money Laundering Specialist</p>
+        <div id="welcome-countdown" class="countdown-big"></div>
+      </div>
+      <div class="welcome-grid">
+        <div class="welcome-card" data-nav="plan">
+          <h3>Study Plan</h3>
+          <div id="welcome-progress"></div>
+          <p>31-day structured plan with daily goals</p>
+        </div>
+        <div class="welcome-card" data-nav="glossary">
+          <h3>Glossary</h3>
+          <p><strong>108</strong> terms &middot; <strong>57</strong> acronyms &middot; <strong>40</strong> FATF recs</p>
+        </div>
+        <div class="welcome-card" data-nav="flashcards">
+          <h3>Flashcards</h3>
+          <p>Drill vocabulary with spaced repetition</p>
+        </div>
+      </div>
+      <div class="domain-weights">
+        <h3>Exam Domain Weights</h3>
+        <div class="weight-bar">
+          <div class="weight-segment d3-bg" style="width:28%"><span>III 28%</span></div>
+          <div class="weight-segment d1-bg" style="width:26%"><span>I 26%</span></div>
+          <div class="weight-segment d2-bg" style="width:25%"><span>II 25%</span></div>
+          <div class="weight-segment d4-bg" style="width:21%"><span>IV 21%</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Guide viewer -->
+    <div id="guide-view" class="view">
+      <div id="guide-content"></div>
+    </div>
+
+    <!-- Glossary view -->
+    <div id="glossary-view" class="view">
+      <div class="glossary-controls">
+        <input type="text" id="glossary-search" placeholder="Search terms...">
+        <div class="glossary-filters">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="terms">Terms</button>
+          <button class="filter-btn" data-filter="acronyms">Acronyms</button>
+          <button class="filter-btn" data-filter="fatf">FATF Recs</button>
+          <button class="filter-btn" data-filter="numbers">Key Numbers</button>
+        </div>
+        <div class="glossary-domain-filters">
+          <button class="domain-filter active" data-domain="all">All Domains</button>
+          <button class="domain-filter" data-domain="I"><span class="domain-badge d1">I</span></button>
+          <button class="domain-filter" data-domain="II"><span class="domain-badge d2">II</span></button>
+          <button class="domain-filter" data-domain="III"><span class="domain-badge d3">III</span></button>
+          <button class="domain-filter" data-domain="IV"><span class="domain-badge d4">IV</span></button>
+        </div>
+      </div>
+      <div id="glossary-count"></div>
+      <div id="glossary-table"></div>
+    </div>
+
+    <!-- Flashcard view -->
+    <div id="flashcard-view" class="view">
+      <div class="flashcard-controls">
+        <select id="flashcard-source">
+          <option value="all">All Terms</option>
+          <option value="terms-only">Glossary Terms Only</option>
+          <option value="acronyms-only">Acronyms Only</option>
+          <option value="key-exam">Key Exam Terms</option>
+          <option value="needs-review">Needs Review</option>
+        </select>
+        <button id="shuffle-btn">Shuffle</button>
+        <span id="flashcard-progress"></span>
+      </div>
+      <div id="flashcard-container">
+        <div id="flashcard" class="flashcard">
+          <div class="flashcard-front">
+            <div class="flashcard-term"></div>
+            <div class="flashcard-hint">Click to reveal</div>
+          </div>
+          <div class="flashcard-back">
+            <div class="flashcard-definition"></div>
+            <div class="flashcard-meta"></div>
+          </div>
+        </div>
+      </div>
+      <div class="flashcard-buttons">
+        <button id="fc-review" class="fc-btn review">Need to Review</button>
+        <button id="fc-know" class="fc-btn know">Know It</button>
+      </div>
+      <div id="flashcard-stats"></div>
+    </div>
+
+    <!-- Study Plan view -->
+    <div id="plan-view" class="view">
+      <div class="plan-header">
+        <h2>31-Day Study Plan</h2>
+        <div id="plan-progress-bar">
+          <div id="plan-progress-fill"></div>
+          <span id="plan-progress-text"></span>
+        </div>
+      </div>
+      <div id="plan-days"></div>
+    </div>
+  </main>
+
+  <script src="lib/marked.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

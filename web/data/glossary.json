@@ -1,0 +1,1461 @@
+{
+  "terms": [
+    {
+      "term": "Money Laundering",
+      "definition": "The process of making illegally-obtained proceeds appear legal by disguising the true nature, source, location, ownership, or control of the funds.",
+      "domain": "I",
+      "fatf_rec": "R.3",
+      "key_exam": "YES"
+    },
+    {
+      "term": "Predicate Offense",
+      "definition": "The underlying criminal activity that generates proceeds which are then laundered. Examples: drug trafficking, fraud, corruption, tax evasion.",
+      "domain": "I",
+      "fatf_rec": "R.3",
+      "key_exam": "YES"
+    },
+    {
+      "term": "Placement",
+      "definition": "First stage of ML: Introducing illicit cash into the financial system through deposits, purchases, or other means.",
+      "domain": "I",
+      "fatf_rec": "",
+      "key_exam": "YES"
+    },
+    {
+      "term": "Layering",
+      "definition": "Second stage of ML: Creating complex layers of financial transactions to separate illicit proceeds from their source and obscure the audit trail.",
+      "domain": "I",
+      "fatf_rec": "",
+      "key_exam": "YES"
+    },
+    {
+      "term": "Integration",
+      "definition": "Third stage of ML: Reintroducing laundered funds into the legitimate economy through seemingly normal business or personal transactions.",
+      "domain": "I",
+      "fatf_rec": "",
+      "key_exam": "YES"
+    },
+    {
+      "term": "Terrorist Financing (TF)",
+      "definition": "Providing or collecting funds to be used for terrorist acts. Unlike ML, funds may come from legitimate sources. The goal is to hide the PURPOSE of funds, not their SOURCE.",
+      "domain": "I",
+      "fatf_rec": "R.5",
+      "key_exam": "YES"
+    },
+    {
+      "term": "Structuring (Smurfing)",
+      "definition": "Breaking up large cash transactions into smaller amounts to avoid reporting thresholds (e.g., $10,000 in the US). Itself a federal crime.",
+      "domain": "I",
+      "fatf_rec": "",
+      "key_exam": "YES"
+    },
+    {
+      "term": "Microstructuring",
+      "definition": "A form of structuring using very small amounts, often below $3,000, to avoid even the CTR and recordkeeping thresholds.",
+      "domain": "I",
+      "fatf_rec": "",
+      "key_exam": "YES"
+    },
+    {
+      "term": "Correspondent Banking",
+      "definition": "An arrangement where one bank (correspondent) provides services on behalf of another bank (respondent), often to access the financial system of a foreign country.",
+      "domain": "I",
+      "fatf_rec": "R.13",
+      "key_exam": "YES"
+    },
+    {
+      "term": "Respondent Bank",
+      "definition": "The bank that uses the correspondent bank's services to access foreign financial systems. The correspondent bank must perform due diligence on the respondent.",
+      "domain": "I",
+      "fatf_rec": "R.13",
+      "key_exam": "YES"
+    },
+    {
+      "term": "Payable-Through Account (PTA)",
+      "definition": "An account at a correspondent bank that allows the respondent bank's customers to directly conduct transactions, creating higher ML risk than standard correspondent arrangements.",
+      "domain": "I",
+      "fatf_rec": "R.13",
+      "key_exam": "YES"
+    },
+    {
+      "term": "Nested Account",
+      "definition": "When a respondent bank allows other banks to use its correspondent banking relationship without the correspondent bank's knowledge, creating hidden sub-relationships.",
+      "domain": "I",
+      "fatf_rec": "R.13",
+      "key_exam": ""
+    },
+    {
+      "term": "Concentration Account",
+      "definition": "Internal bank accounts used to facilitate processing and settlement of multiple customer transactions, often on the same day. Can obscure customer identity if not properly managed.",
+      "domain": "I",
+      "fatf_rec": "",
+      "key_exam": ""
+    },
+    {
+      "term": "Private Banking",
+      "definition": "Personalized financial services for high-net-worth individuals. Higher ML risk due to personal relationships, complex structures, and confidentiality expectations.",
+      "domain": "I",
+      "fatf_rec": "",
+      "key_exam": "YES"
+    },
+    {
+      "term": "Politically Exposed Person (PEP)",
+      "definition": "An individual entrusted with a prominent public function (e.g., head of state, senior politician, military leader). Includes family members and close associates. Requires Enhanced Due Diligence.",
+      "domain": "I, III",
+      "fatf_rec": "R.12",
+      "key_exam": "YES"
+    },
+    {
+      "term": "Shell Company",
+      "definition": "A company that has no active business operations, significant assets, or employees. Often used to obscure beneficial ownership and move illicit funds.",
+      "domain": "I",
+      "fatf_rec": "R.24",
+      "key_exam": "YES"
+    },
+    {
+      "term": "Shelf Company",
+      "definition": "A company that was legally formed but has remained inactive ('on the shelf'). Purchased to provide an appearance of longevity and legitimacy.",
+      "domain": "I",
+      "fatf_rec": "R.24",
+      "key_exam": ""
+    },
+    {
+      "term": "Beneficial Owner",
+      "definition": "The natural person(s) who ultimately owns or controls a legal entity or arrangement, or on whose behalf a transaction is conducted. Key concept in transparency.",
+      "domain": "I, II, III",
+      "fatf_rec": "R.10, R.24, R.25",
+      "key_exam": "YES"
+    },
+    {
+      "term": "Money Services Business (MSB)",
+      "definition": "Non-bank financial institution providing services like money transmission, check cashing, currency exchange, or selling money orders/travelers checks.",
+      "domain": "I",
+      "fatf_rec": "R.14",
+      "key_exam": "YES"
+    },
+    {
+      "term": "Hawala",
+      "definition": "An informal value transfer system based on trust and personal networks. Transfers value without physically moving money. Common in South Asia and Middle East.",
+      "domain": "I",
+      "fatf_rec": "R.14",
+      "key_exam": "YES"
+    },
+    {
+      "term": "Informal Value Transfer System (IVTS)",
+      "definition": "Systems for transferring money/value outside the conventional banking system. Includes hawala, hundi, fei ch'ien. Often unregulated or under-regulated.",
+      "domain": "I",
+      "fatf_rec": "R.14",
+      "key_exam": "YES"
+    },
+    {
+      "term": "Trade-Based Money Laundering (TBML)",
+      "definition": "Using international trade transactions to disguise and move value. Techniques include over/under-invoicing, multiple invoicing, and misrepresentation of goods/services.",
+      "domain": "I",
+      "fatf_rec": "",
+      "key_exam": "YES"
+    },
+    {
+      "term": "Black Market Peso Exchange (BMPE)",
+      "definition": "A trade-based ML method originally from Colombian drug trade. Converts drug dollars in the US into pesos in Colombia through trade transactions.",
+      "domain": "I",
+      "fatf_rec": "",
+      "key_exam": "YES"
+    },
+    {
+      "term": "Free Trade Zone (FTZ)",
+      "definition": "Designated areas within a country where goods may be imported, stored, handled, and re-exported without customs duties. Reduced oversight creates ML vulnerabilities.",
+      "domain": "I",
+      "fatf_rec": "",
+      "key_exam": ""
+    },
+    {
+      "term": "Gatekeeper",
+      "definition": "Professionals who control access to the financial system: lawyers, notaries, accountants, auditors. Can facilitate or prevent ML through their professional services.",
+      "domain": "I",
+      "fatf_rec": "R.22, R.23",
+      "key_exam": "YES"
+    },
+    {
+      "term": "Trust and Company Service Provider (TCSP)",
+      "definition": "Professionals who create and manage legal entities and arrangements (companies, trusts). Can be exploited to create complex structures hiding beneficial ownership.",
+      "domain": "I",
+      "fatf_rec": "R.22",
+      "key_exam": ""
+    },
+    {
+      "term": "Virtual Currency / Virtual Asset",
+      "definition": "A digital representation of value that can be digitally traded and functions as a medium of exchange, unit of account, or store of value. Includes cryptocurrency.",
+      "domain": "I",
+      "fatf_rec": "R.15",
+      "key_exam": "YES"
+    },
+    {
+      "term": "Virtual Asset Service Provider (VASP)",
+      "definition": "Any person/entity that conducts exchange, transfer, safekeeping, or administration of virtual assets. Subject to FATF standards since 2019.",
+      "domain": "I",
+      "fatf_rec": "R.15",
+      "key_exam": "YES"
+    },
+    {
+      "term": "Prepaid Card",
+      "definition": "A stored value card loaded with funds in advance. ML risk due to anonymity, ease of cross-border transport, and difficulty tracing transactions.",
+      "domain": "I",
+      "fatf_rec": "",
+      "key_exam": ""
+    },
+    {
+      "term": "Non-Profit Organization (NPO)",
+      "definition": "Organizations that raise/disburse funds for charitable, religious, or social purposes. Vulnerable to TF abuse through diversion of funds or sham entities.",
+      "domain": "I",
+      "fatf_rec": "R.8",
+      "key_exam": "YES"
+    },
+    {
+      "term": "Willful Blindness",
+      "definition": "Deliberate avoidance of knowledge of the facts; courts treat it as the equivalent of actual knowledge for ML offenses. Also called 'purposeful indifference'.",
+      "domain": "I",
+      "fatf_rec": "",
+      "key_exam": "YES"
+    },
+    {
+      "term": "Wildlife Trafficking",
+      "definition": "Illegal trade in protected animal and plant species. Increasingly recognized as a significant predicate offense for money laundering.",
+      "domain": "I",
+      "fatf_rec": "",
+      "key_exam": ""
+    },
+    {
+      "term": "Financial Action Task Force (FATF)",
+      "definition": "Intergovernmental body established in 1989 by G7 to set international AML/CFT standards. Issues the 40 Recommendations and conducts mutual evaluations.",
+      "domain": "II",
+      "fatf_rec": "",
+      "key_exam": "YES"
+    },
+    {
+      "term": "FATF 40 Recommendations",
+      "definition": "The international standards for combating ML, TF, and proliferation financing. Cover legal systems, law enforcement, financial system, transparency, and international cooperation.",
+      "domain": "II",
+      "fatf_rec": "",
+      "key_exam": "YES"
+    },
+    {
+      "term": "FATF Interpretive Notes",
+      "definition": "Detailed implementation guidance published alongside each FATF Recommendation. Provide specifics on how to implement the standards.",
+      "domain": "II",
+      "fatf_rec": "",
+      "key_exam": "YES"
+    },
+    {
+      "term": "Risk-Based Approach (RBA)",
+      "definition": "The foundational principle that countries and institutions should identify, assess, and understand their ML/TF risks and apply commensurate measures. FATF R.1.",
+      "domain": "II, III",
+      "fatf_rec": "R.1",
+      "key_exam": "YES"
+    },
+    {
+      "term": "Mutual Evaluation",
+      "definition": "A peer review process where FATF or FSRB members assess a country's compliance with the 40 Recommendations and the effectiveness of its AML/CFT system.",
+      "domain": "II",
+      "fatf_rec": "",
+      "key_exam": "YES"
+    },
+    {
+      "term": "FATF Grey List",
+      "definition": "Countries identified as having strategic deficiencies in their AML/CFT regimes but have committed to action plans. Formally: 'Jurisdictions under Increased Monitoring'.",
+      "domain": "II",
+      "fatf_rec": "",
+      "key_exam": "YES"
+    },
+    {
+      "term": "FATF Black List",
+      "definition": "Countries with significant strategic deficiencies that have not committed to action plans. Formally: 'High-Risk Jurisdictions subject to a Call for Action'. Triggers countermeasures.",
+      "domain": "II",
+      "fatf_rec": "R.19",
+      "key_exam": "YES"
+    },
+    {
+      "term": "FATF-Style Regional Body (FSRB)",
+      "definition": "Regional organizations that promote FATF standards in their regions and conduct mutual evaluations. Examples: APG, CFATF, MONEYVAL, GAFILAT.",
+      "domain": "II",
+      "fatf_rec": "",
+      "key_exam": "YES"
+    },
+    {
+      "term": "Basel Committee on Banking Supervision",
+      "definition": "Global standard-setter for bank regulation. Issued key AML guidance including KYC paper (2001), Sound Management of ML/TF Risks, and Correspondent Banking annex.",
+      "domain": "II",
+      "fatf_rec": "",
+      "key_exam": "YES"
+    },
+    {
+      "term": "European Union AML Directives",
+      "definition": "Series of directives (1st through 6th) establishing EU-wide AML/CFT requirements. Each expanded scope, covered entities, and requirements.",
+      "domain": "II",
+      "fatf_rec": "",
+      "key_exam": "YES"
+    },
+    {
+      "term": "Egmont Group",
+      "definition": "International network of Financial Intelligence Units (FIUs). Facilitates cooperation and information exchange among FIUs worldwide through the Egmont Secure Web.",
+      "domain": "II, IV",
+      "fatf_rec": "",
+      "key_exam": "YES"
+    },
+    {
+      "term": "Wolfsberg Group",
+      "definition": "Association of 13 global banks that develop frameworks and guidance for managing financial crime risks. Published Wolfsberg Principles on AML, KYC, and correspondent banking.",
+      "domain": "II",
+      "fatf_rec": "",
+      "key_exam": ""
+    },
+    {
+      "term": "USA PATRIOT Act",
+      "definition": "Uniting and Strengthening America by Providing Appropriate Tools Required to Intercept and Obstruct Terrorism Act of 2001. Key US AML legislation post-9/11.",
+      "domain": "II",
+      "fatf_rec": "",
+      "key_exam": "YES"
+    },
+    {
+      "term": "Section 311 (PATRIOT Act)",
+      "definition": "Authorizes Treasury to designate foreign jurisdictions, institutions, or transactions as 'primary money laundering concerns' and impose special measures.",
+      "domain": "II",
+      "fatf_rec": "",
+      "key_exam": "YES"
+    },
+    {
+      "term": "Section 312 (PATRIOT Act)",
+      "definition": "Requires enhanced due diligence for correspondent accounts and private banking accounts held by non-US persons.",
+      "domain": "II",
+      "fatf_rec": "",
+      "key_exam": "YES"
+    },
+    {
+      "term": "Section 314(a)",
+      "definition": "Allows law enforcement to request financial institutions to search their records for accounts of persons suspected of terrorism or ML.",
+      "domain": "II, IV",
+      "fatf_rec": "",
+      "key_exam": "YES"
+    },
+    {
+      "term": "Section 314(b)",
+      "definition": "Provides safe harbor for financial institutions to share information with each other to identify and report ML or TF, under specific conditions.",
+      "domain": "II, IV",
+      "fatf_rec": "",
+      "key_exam": "YES"
+    },
+    {
+      "term": "Section 326 (PATRIOT Act)",
+      "definition": "Requires financial institutions to establish Customer Identification Programs (CIP) to verify identity of persons opening accounts.",
+      "domain": "II, III",
+      "fatf_rec": "",
+      "key_exam": "YES"
+    },
+    {
+      "term": "Anti-Money Laundering Act of 2020 (AMLA)",
+      "definition": "Major update to US AML framework. Established beneficial ownership reporting, enhanced whistleblower protections, and expanded BSA coverage to virtual currency.",
+      "domain": "II",
+      "fatf_rec": "",
+      "key_exam": "YES"
+    },
+    {
+      "term": "Bank Secrecy Act (BSA)",
+      "definition": "US federal law (1970) requiring financial institutions to maintain records and file reports to assist government agencies in detecting and preventing ML.",
+      "domain": "II",
+      "fatf_rec": "",
+      "key_exam": "YES"
+    },
+    {
+      "term": "Office of Foreign Assets Control (OFAC)",
+      "definition": "US Treasury bureau administering economic/trade sanctions. Maintains the Specially Designated Nationals (SDN) List. Violations carry strict liability.",
+      "domain": "II, III",
+      "fatf_rec": "",
+      "key_exam": "YES"
+    },
+    {
+      "term": "SDN List",
+      "definition": "Specially Designated Nationals and Blocked Persons List maintained by OFAC. Individuals and entities whose assets must be blocked; transactions with them are prohibited.",
+      "domain": "II, III",
+      "fatf_rec": "",
+      "key_exam": "YES"
+    },
+    {
+      "term": "50% Rule (OFAC)",
+      "definition": "Entities owned 50% or more, directly or indirectly, by one or more blocked persons are themselves considered blocked, even if not listed on the SDN List.",
+      "domain": "II, III",
+      "fatf_rec": "",
+      "key_exam": "YES"
+    },
+    {
+      "term": "Vienna Convention (1988)",
+      "definition": "UN Convention Against Illicit Traffic in Narcotic Drugs. First international treaty to define money laundering as a criminal offense.",
+      "domain": "II",
+      "fatf_rec": "",
+      "key_exam": ""
+    },
+    {
+      "term": "Palermo Convention (2000)",
+      "definition": "UN Convention against Transnational Organized Crime. Broadened the definition of money laundering beyond drug trafficking to all serious crimes.",
+      "domain": "II",
+      "fatf_rec": "R.3",
+      "key_exam": ""
+    },
+    {
+      "term": "Designated Non-Financial Businesses and Professions (DNFBPs)",
+      "definition": "Non-financial entities subject to AML/CFT obligations: casinos, real estate agents, dealers in precious metals/stones, lawyers, notaries, accountants, TCSPs.",
+      "domain": "II, III",
+      "fatf_rec": "R.22, R.23",
+      "key_exam": "YES"
+    },
+    {
+      "term": "Asia/Pacific Group on Money Laundering (APG)",
+      "definition": "FSRB for the Asia-Pacific region. 41 member jurisdictions. Conducts mutual evaluations and typologies research.",
+      "domain": "II",
+      "fatf_rec": "",
+      "key_exam": ""
+    },
+    {
+      "term": "Caribbean Financial Action Task Force (CFATF)",
+      "definition": "FSRB for the Caribbean basin region. 25+ member states.",
+      "domain": "II",
+      "fatf_rec": "",
+      "key_exam": ""
+    },
+    {
+      "term": "MONEYVAL",
+      "definition": "Committee of Experts on the Evaluation of Anti-Money Laundering Measures and the Financing of Terrorism. FSRB for Council of Europe member states not in FATF.",
+      "domain": "II",
+      "fatf_rec": "",
+      "key_exam": ""
+    },
+    {
+      "term": "GAFILAT",
+      "definition": "Financial Action Task Force of Latin America. FSRB for Latin American countries. Formerly GAFISUD.",
+      "domain": "II",
+      "fatf_rec": "",
+      "key_exam": ""
+    },
+    {
+      "term": "FinCEN",
+      "definition": "Financial Crimes Enforcement Network. US FIU within the Treasury Department. Collects and analyzes financial transaction data to combat ML, TF, and other financial crimes.",
+      "domain": "II, IV",
+      "fatf_rec": "R.29",
+      "key_exam": "YES"
+    },
+    {
+      "term": "Customer Due Diligence (CDD)",
+      "definition": "The process of identifying and verifying customer identity, understanding the nature of customer activities, and assessing ML/TF risks. Foundation of KYC.",
+      "domain": "III",
+      "fatf_rec": "R.10",
+      "key_exam": "YES"
+    },
+    {
+      "term": "Enhanced Due Diligence (EDD)",
+      "definition": "Additional measures applied to higher-risk customers, products, or geographies. Required for PEPs, correspondent banking, and complex/unusual transactions.",
+      "domain": "III",
+      "fatf_rec": "R.10",
+      "key_exam": "YES"
+    },
+    {
+      "term": "Simplified Due Diligence (SDD)",
+      "definition": "Reduced CDD measures permitted for lower-risk situations where ML/TF risk is assessed as low. Not allowed when there is suspicion of ML/TF.",
+      "domain": "III",
+      "fatf_rec": "R.10",
+      "key_exam": "YES"
+    },
+    {
+      "term": "Know Your Customer (KYC)",
+      "definition": "Comprehensive framework for understanding who customers are, what they do, and what is normal for them. Includes CDD, ongoing monitoring, and risk assessment.",
+      "domain": "III",
+      "fatf_rec": "R.10",
+      "key_exam": "YES"
+    },
+    {
+      "term": "Know Your Employee (KYE)",
+      "definition": "Program to screen employees for ML/TF risk, including background checks, monitoring for unusual behavior, and creating a culture of compliance.",
+      "domain": "III",
+      "fatf_rec": "",
+      "key_exam": "YES"
+    },
+    {
+      "term": "Customer Identification Program (CIP)",
+      "definition": "US requirement (Section 326) for financial institutions to verify the identity of persons opening accounts using documentary or non-documentary methods.",
+      "domain": "III",
+      "fatf_rec": "",
+      "key_exam": "YES"
+    },
+    {
+      "term": "Suspicious Activity Report (SAR)",
+      "definition": "Mandatory filing with FIU when a financial institution knows, suspects, or has reason to suspect ML, TF, or other suspicious activity. Confidential -- no tipping off.",
+      "domain": "III, IV",
+      "fatf_rec": "R.20",
+      "key_exam": "YES"
+    },
+    {
+      "term": "Currency Transaction Report (CTR)",
+      "definition": "US report filed for cash transactions exceeding $10,000 in a single business day. Filed with FinCEN.",
+      "domain": "III",
+      "fatf_rec": "",
+      "key_exam": "YES"
+    },
+    {
+      "term": "Tipping Off",
+      "definition": "Illegally disclosing to a customer or others that a SAR has been or will be filed, or that an investigation is underway. Criminal offense in most jurisdictions.",
+      "domain": "III, IV",
+      "fatf_rec": "R.21",
+      "key_exam": "YES"
+    },
+    {
+      "term": "Safe Harbor",
+      "definition": "Legal protection for financial institutions and employees who file SARs in good faith, shielding them from liability even if the reported activity turns out to be legitimate.",
+      "domain": "III, IV",
+      "fatf_rec": "",
+      "key_exam": "YES"
+    },
+    {
+      "term": "Compliance Officer",
+      "definition": "Senior employee designated with responsibility for the institution's AML/CFT compliance program. Must have sufficient authority, independence, and access to resources.",
+      "domain": "III",
+      "fatf_rec": "R.18",
+      "key_exam": "YES"
+    },
+    {
+      "term": "Independent Audit / Independent Testing",
+      "definition": "Regular review of the AML/CFT program by qualified persons independent of the compliance function. Tests adequacy and effectiveness of the program.",
+      "domain": "III",
+      "fatf_rec": "R.18",
+      "key_exam": "YES"
+    },
+    {
+      "term": "AML/CFT Training",
+      "definition": "Required education for all relevant employees on ML/TF risks, regulations, institution policies, and their obligations. Must be ongoing and role-appropriate.",
+      "domain": "III",
+      "fatf_rec": "R.18",
+      "key_exam": "YES"
+    },
+    {
+      "term": "Culture of Compliance",
+      "definition": "An organizational environment where compliance is valued, supported by senior management ('tone from the top'), and embedded in daily operations.",
+      "domain": "III",
+      "fatf_rec": "R.18",
+      "key_exam": "YES"
+    },
+    {
+      "term": "Transaction Monitoring",
+      "definition": "Ongoing surveillance of customer transactions to detect patterns or activities that may indicate ML, TF, or other suspicious activity. Can be manual or automated.",
+      "domain": "III",
+      "fatf_rec": "",
+      "key_exam": "YES"
+    },
+    {
+      "term": "Sanctions Screening",
+      "definition": "Process of checking customers, transactions, and counterparties against sanctions lists (OFAC SDN, UN, EU, etc.) to ensure compliance with sanctions programs.",
+      "domain": "III",
+      "fatf_rec": "",
+      "key_exam": "YES"
+    },
+    {
+      "term": "PEP Screening",
+      "definition": "Process of identifying whether customers or their associates are Politically Exposed Persons, triggering EDD requirements.",
+      "domain": "III",
+      "fatf_rec": "R.12",
+      "key_exam": "YES"
+    },
+    {
+      "term": "Risk Scoring",
+      "definition": "Methodology for assigning risk ratings to customers based on factors like geography, product type, transaction patterns, and customer type. Drives the level of due diligence.",
+      "domain": "III",
+      "fatf_rec": "R.1",
+      "key_exam": "YES"
+    },
+    {
+      "term": "Four/Five Pillars of AML Program",
+      "definition": "Core elements: (1) Internal policies/procedures/controls, (2) Compliance officer, (3) Training, (4) Independent testing. US adds (5) Risk-based CDD including beneficial ownership.",
+      "domain": "III",
+      "fatf_rec": "",
+      "key_exam": "YES"
+    },
+    {
+      "term": "Ongoing Due Diligence / Monitoring",
+      "definition": "Continuous review of customer activity to ensure transactions are consistent with the institution's knowledge of the customer, their business, and risk profile.",
+      "domain": "III",
+      "fatf_rec": "R.10",
+      "key_exam": "YES"
+    },
+    {
+      "term": "Red Flags",
+      "definition": "Indicators of potentially suspicious activity that may warrant further investigation. Categories include unusual behavior, transactions, identification, and employee activity.",
+      "domain": "III",
+      "fatf_rec": "",
+      "key_exam": "YES"
+    },
+    {
+      "term": "De-risking",
+      "definition": "Practice of financial institutions terminating or restricting business relationships with entire categories of customers perceived as high-risk, rather than managing the risk.",
+      "domain": "III",
+      "fatf_rec": "",
+      "key_exam": "YES"
+    },
+    {
+      "term": "Wire Transfer / Travel Rule",
+      "definition": "Requirement that originator and beneficiary information accompany wire transfers throughout the payment chain. Based on FATF R.16.",
+      "domain": "III",
+      "fatf_rec": "R.16",
+      "key_exam": "YES"
+    },
+    {
+      "term": "Automated AML/CFT Solutions",
+      "definition": "Technology systems for transaction monitoring, sanctions screening, and risk scoring. Require proper calibration to balance detection with false positive management.",
+      "domain": "III",
+      "fatf_rec": "",
+      "key_exam": ""
+    },
+    {
+      "term": "Suspicious Transaction Report (STR)",
+      "definition": "Term used in many jurisdictions outside the US for reports of suspicious activity (equivalent to SAR). Filed with the national FIU.",
+      "domain": "IV",
+      "fatf_rec": "R.20",
+      "key_exam": "YES"
+    },
+    {
+      "term": "Financial Intelligence Unit (FIU)",
+      "definition": "National agency responsible for receiving, analyzing, and disseminating suspicious transaction reports. Three core functions: Receive, Analyze, Disseminate.",
+      "domain": "IV",
+      "fatf_rec": "R.29",
+      "key_exam": "YES"
+    },
+    {
+      "term": "Mutual Legal Assistance Treaty (MLAT)",
+      "definition": "Bilateral agreement between countries for exchanging evidence and legal assistance in criminal investigations. Formal mechanism for international cooperation.",
+      "domain": "IV",
+      "fatf_rec": "R.37-40",
+      "key_exam": "YES"
+    },
+    {
+      "term": "SHERLOC",
+      "definition": "Sharing Electronic Resources and Laws on Crime. UN knowledge management portal for ML information maintained by UNODC.",
+      "domain": "IV",
+      "fatf_rec": "",
+      "key_exam": ""
+    },
+    {
+      "term": "Subpoena",
+      "definition": "Legal order requiring production of documents or testimony. Financial institutions must have systems to respond while protecting privileged information.",
+      "domain": "IV",
+      "fatf_rec": "",
+      "key_exam": ""
+    },
+    {
+      "term": "314(a) Request",
+      "definition": "FinCEN request to financial institutions to search records for accounts of specific persons suspected of terrorism or ML. Must be searched within 14 days.",
+      "domain": "IV",
+      "fatf_rec": "",
+      "key_exam": "YES"
+    },
+    {
+      "term": "Parallel Investigation",
+      "definition": "Conducting an internal investigation simultaneously with a government/law enforcement investigation. Requires careful coordination and legal guidance.",
+      "domain": "IV",
+      "fatf_rec": "",
+      "key_exam": ""
+    },
+    {
+      "term": "Account Closure",
+      "definition": "Decision to close a customer's account due to suspicious activity or inability to manage ML/TF risk. Must be documented and may trigger SAR filing.",
+      "domain": "IV",
+      "fatf_rec": "",
+      "key_exam": "YES"
+    },
+    {
+      "term": "Commission Rogatoire",
+      "definition": "Letters rogatory or formal request from one country's court to another country's court for judicial assistance in obtaining evidence.",
+      "domain": "IV",
+      "fatf_rec": "",
+      "key_exam": ""
+    },
+    {
+      "term": "Memorandum of Understanding (MOU)",
+      "definition": "Agreement between FIUs or regulators to cooperate and share information. Less formal than MLATs. Used for intelligence (not evidence) sharing.",
+      "domain": "IV",
+      "fatf_rec": "",
+      "key_exam": ""
+    },
+    {
+      "term": "FIU.net",
+      "definition": "Decentralized EU network for FIUs to exchange information, using features like Ma3tch for matching common subjects without exposing irrelevant data.",
+      "domain": "IV",
+      "fatf_rec": "",
+      "key_exam": ""
+    },
+    {
+      "term": "Egmont Secure Web (ESW)",
+      "definition": "Secure communication channel used by Egmont Group member FIUs to exchange information about suspicious transactions.",
+      "domain": "IV",
+      "fatf_rec": "",
+      "key_exam": ""
+    },
+    {
+      "term": "Attorney-Client Privilege",
+      "definition": "Legal protection of communications between client and attorney. In internal investigations, applies to the entity, not individual employees. Can be waived.",
+      "domain": "IV",
+      "fatf_rec": "",
+      "key_exam": ""
+    },
+    {
+      "term": "Privilege Log",
+      "definition": "Detailed record of documents withheld from production due to attorney-client privilege or work product doctrine during an investigation.",
+      "domain": "IV",
+      "fatf_rec": "",
+      "key_exam": ""
+    },
+    {
+      "term": "Proliferation Financing",
+      "definition": "Providing funds or financial services for the manufacture, acquisition, or development of weapons of mass destruction (WMD). Covered by FATF R.7.",
+      "domain": "II",
+      "fatf_rec": "R.7",
+      "key_exam": "YES"
+    },
+    {
+      "term": "Targeted Financial Sanctions (TFS)",
+      "definition": "Freezing assets and prohibiting financial transactions with designated persons/entities related to terrorism (R.6) or WMD proliferation (R.7).",
+      "domain": "II, III",
+      "fatf_rec": "R.6, R.7",
+      "key_exam": "YES"
+    },
+    {
+      "term": "Correspondent Banking (FATF)",
+      "definition": "FATF R.13 requires institutions to understand the respondent's business, assess its AML/CFT controls, obtain senior management approval, and prohibit relationships with shell banks.",
+      "domain": "II",
+      "fatf_rec": "R.13",
+      "key_exam": "YES"
+    },
+    {
+      "term": "Travel Rule",
+      "definition": "FATF R.16 requirement that originator and beneficiary information travel with wire transfers. Extended to virtual asset transfers in 2019.",
+      "domain": "II, III",
+      "fatf_rec": "R.16",
+      "key_exam": "YES"
+    },
+    {
+      "term": "Record Keeping",
+      "definition": "FATF R.11 requires maintaining transaction records and CDD information for at least 5 years after the relationship ends or transaction date.",
+      "domain": "II, III",
+      "fatf_rec": "R.11",
+      "key_exam": "YES"
+    },
+    {
+      "term": "Suspicious Transaction Reporting",
+      "definition": "FATF R.20 requires reporting suspicious transactions to FIU regardless of amount, including attempted transactions. No threshold applies.",
+      "domain": "II, III, IV",
+      "fatf_rec": "R.20",
+      "key_exam": "YES"
+    },
+    {
+      "term": "Extraterritorial Jurisdiction",
+      "definition": "The ability of a country (notably the US) to prosecute ML offenses that have a connection to that country, even if the primary conduct occurred elsewhere.",
+      "domain": "II",
+      "fatf_rec": "",
+      "key_exam": "YES"
+    }
+  ],
+  "fatf_recs": [
+    {
+      "number": "1",
+      "title": "Risk-Based Approach",
+      "group": "A. AML/CFT Policies",
+      "key_points": "Countries must assess risks and apply commensurate measures. Foundation for all other recommendations.",
+      "cams_domain": "II, III"
+    },
+    {
+      "number": "2",
+      "title": "National Cooperation and Coordination",
+      "group": "A. AML/CFT Policies",
+      "key_points": "Countries should have national AML/CFT policies and designate authority for coordination.",
+      "cams_domain": "II"
+    },
+    {
+      "number": "3",
+      "title": "Money Laundering Offense",
+      "group": "B. ML and Confiscation",
+      "key_points": "Criminalize ML based on Vienna and Palermo Conventions. Broad interpretation of 'knowing'.",
+      "cams_domain": "I, II"
+    },
+    {
+      "number": "4",
+      "title": "Confiscation and Provisional Measures",
+      "group": "B. ML and Confiscation",
+      "key_points": "Enable confiscation of laundered property, proceeds, and instrumentalities.",
+      "cams_domain": "II"
+    },
+    {
+      "number": "5",
+      "title": "Terrorist Financing Offense",
+      "group": "C. TF and Proliferation",
+      "key_points": "Criminalize TF on basis of TF Convention. Applies regardless of whether funds were actually used.",
+      "cams_domain": "I, II"
+    },
+    {
+      "number": "6",
+      "title": "Targeted Financial Sanctions - Terrorism",
+      "group": "C. TF and Proliferation",
+      "key_points": "Implement UN Security Council Resolutions on terrorism. Freeze assets without delay.",
+      "cams_domain": "II, III"
+    },
+    {
+      "number": "7",
+      "title": "Targeted Financial Sanctions - Proliferation",
+      "group": "C. TF and Proliferation",
+      "key_points": "Implement UNSC resolutions on WMD proliferation financing (North Korea, Iran).",
+      "cams_domain": "II, III"
+    },
+    {
+      "number": "8",
+      "title": "Non-Profit Organizations",
+      "group": "C. TF and Proliferation",
+      "key_points": "Protect NPOs from TF abuse using risk-based approach. Revised 2023 to prevent disproportionate measures.",
+      "cams_domain": "I, II"
+    },
+    {
+      "number": "9",
+      "title": "Financial Institution Secrecy Laws",
+      "group": "D. Preventive Measures",
+      "key_points": "Bank secrecy must not inhibit implementation of FATF Recommendations.",
+      "cams_domain": "II"
+    },
+    {
+      "number": "10",
+      "title": "Customer Due Diligence",
+      "group": "D. Preventive Measures",
+      "key_points": "THE most important rec. Identify/verify customers, beneficial owners. Understand purpose of relationship. Ongoing monitoring.",
+      "cams_domain": "III"
+    },
+    {
+      "number": "11",
+      "title": "Record-keeping",
+      "group": "D. Preventive Measures",
+      "key_points": "Maintain transaction records and CDD info for at least 5 years.",
+      "cams_domain": "III"
+    },
+    {
+      "number": "12",
+      "title": "Politically Exposed Persons",
+      "group": "D. Preventive Measures",
+      "key_points": "Require EDD for PEPs (foreign, domestic, international org). Includes family and close associates.",
+      "cams_domain": "I, III"
+    },
+    {
+      "number": "13",
+      "title": "Correspondent Banking",
+      "group": "D. Preventive Measures",
+      "key_points": "Assess respondent's AML/CFT controls. Senior management approval. Prohibit shell bank relationships.",
+      "cams_domain": "I, III"
+    },
+    {
+      "number": "14",
+      "title": "Money/Value Transfer Services",
+      "group": "D. Preventive Measures",
+      "key_points": "MVT providers must be licensed/registered and comply with AML/CFT measures.",
+      "cams_domain": "I, III"
+    },
+    {
+      "number": "15",
+      "title": "New Technologies (Virtual Assets)",
+      "group": "D. Preventive Measures",
+      "key_points": "Apply RBA to virtual assets and VASPs. VASPs must be licensed/registered. Crypto travel rule.",
+      "cams_domain": "I, II, III"
+    },
+    {
+      "number": "16",
+      "title": "Wire Transfers (Travel Rule)",
+      "group": "D. Preventive Measures",
+      "key_points": "Originator and beneficiary info must accompany wire transfers. Ordering, intermediary, and beneficiary institution obligations.",
+      "cams_domain": "III"
+    },
+    {
+      "number": "17",
+      "title": "Reliance on Third Parties",
+      "group": "D. Preventive Measures",
+      "key_points": "FIs may rely on third parties for CDD but remain ultimately responsible.",
+      "cams_domain": "III"
+    },
+    {
+      "number": "18",
+      "title": "Internal Controls",
+      "group": "D. Preventive Measures",
+      "key_points": "FIs must implement AML/CFT programs: compliance officer, training, independent audit, screening procedures. Group-wide programs.",
+      "cams_domain": "III"
+    },
+    {
+      "number": "19",
+      "title": "Higher-Risk Countries",
+      "group": "D. Preventive Measures",
+      "key_points": "Apply enhanced measures proportionate to risks for countries on FATF grey/black lists.",
+      "cams_domain": "II, III"
+    },
+    {
+      "number": "20",
+      "title": "Suspicious Transaction Reporting",
+      "group": "D. Preventive Measures",
+      "key_points": "File STRs/SARs with FIU for suspected ML/TF. No monetary threshold. Includes attempted transactions.",
+      "cams_domain": "III, IV"
+    },
+    {
+      "number": "21",
+      "title": "Tipping-Off and Confidentiality",
+      "group": "D. Preventive Measures",
+      "key_points": "FIs and their employees protected from liability for good-faith reporting. Prohibited from disclosing ('tipping off').",
+      "cams_domain": "III, IV"
+    },
+    {
+      "number": "22",
+      "title": "DNFBPs: CDD",
+      "group": "D. Preventive Measures",
+      "key_points": "Apply CDD requirements to designated non-financial businesses and professions.",
+      "cams_domain": "I, III"
+    },
+    {
+      "number": "23",
+      "title": "DNFBPs: Other Measures",
+      "group": "D. Preventive Measures",
+      "key_points": "Apply reporting, internal controls, and other preventive measures to DNFBPs.",
+      "cams_domain": "I, III"
+    },
+    {
+      "number": "24",
+      "title": "Transparency of Legal Persons",
+      "group": "E. Transparency",
+      "key_points": "Countries must ensure adequate transparency of beneficial ownership of legal persons. 2022 revision strengthened requirements.",
+      "cams_domain": "I, II"
+    },
+    {
+      "number": "25",
+      "title": "Transparency of Legal Arrangements",
+      "group": "E. Transparency",
+      "key_points": "Ensure adequate transparency of beneficial ownership of trusts and similar arrangements.",
+      "cams_domain": "I, II"
+    },
+    {
+      "number": "26",
+      "title": "Regulation and Supervision of FIs",
+      "group": "F. Supervision",
+      "key_points": "FIs must be subject to adequate AML/CFT regulation and supervision. Risk-based supervisory approach.",
+      "cams_domain": "II"
+    },
+    {
+      "number": "27",
+      "title": "Powers of Supervisors",
+      "group": "F. Supervision",
+      "key_points": "Supervisors must have adequate powers to supervise, inspect, compel production, and impose sanctions.",
+      "cams_domain": "II"
+    },
+    {
+      "number": "28",
+      "title": "Regulation of DNFBPs",
+      "group": "F. Supervision",
+      "key_points": "DNFBPs subject to regulation and supervision for AML/CFT compliance.",
+      "cams_domain": "II"
+    },
+    {
+      "number": "29",
+      "title": "Financial Intelligence Units",
+      "group": "G. International Cooperation",
+      "key_points": "Countries should establish FIUs to receive, analyze, and disseminate STRs and other relevant information.",
+      "cams_domain": "II, IV"
+    },
+    {
+      "number": "30",
+      "title": "Law Enforcement Responsibilities",
+      "group": "G. International Cooperation",
+      "key_points": "Designated law enforcement authorities must investigate ML, TF, and predicate offenses.",
+      "cams_domain": "IV"
+    },
+    {
+      "number": "31",
+      "title": "Powers of Law Enforcement",
+      "group": "G. International Cooperation",
+      "key_points": "Powers to compel production, search, seize, take witness statements, use investigative techniques.",
+      "cams_domain": "IV"
+    },
+    {
+      "number": "32",
+      "title": "Cash Couriers",
+      "group": "G. International Cooperation",
+      "key_points": "Detect physical cross-border transportation of currency and bearer negotiable instruments.",
+      "cams_domain": "I, II"
+    },
+    {
+      "number": "33",
+      "title": "Statistics",
+      "group": "G. International Cooperation",
+      "key_points": "Maintain comprehensive statistics on AML/CFT effectiveness.",
+      "cams_domain": "II"
+    },
+    {
+      "number": "34",
+      "title": "Guidance and Feedback",
+      "group": "G. International Cooperation",
+      "key_points": "Competent authorities should provide guidance and feedback to FIs and DNFBPs.",
+      "cams_domain": "II"
+    },
+    {
+      "number": "35",
+      "title": "Sanctions",
+      "group": "G. International Cooperation",
+      "key_points": "Effective proportionate and dissuasive sanctions for non-compliance with AML/CFT requirements.",
+      "cams_domain": "II"
+    },
+    {
+      "number": "36",
+      "title": "International Instruments",
+      "group": "G. International Cooperation",
+      "key_points": "Become party to and implement relevant international conventions (Vienna, Palermo, TF Convention).",
+      "cams_domain": "II, IV"
+    },
+    {
+      "number": "37",
+      "title": "Mutual Legal Assistance",
+      "group": "G. International Cooperation",
+      "key_points": "Provide widest range of mutual legal assistance in ML/TF investigations and prosecutions.",
+      "cams_domain": "IV"
+    },
+    {
+      "number": "38",
+      "title": "MLA: Freezing and Confiscation",
+      "group": "G. International Cooperation",
+      "key_points": "Enable freezing and confiscation of assets at foreign request.",
+      "cams_domain": "IV"
+    },
+    {
+      "number": "39",
+      "title": "Extradition",
+      "group": "G. International Cooperation",
+      "key_points": "Cooperate on extradition for ML and TF offenses.",
+      "cams_domain": "IV"
+    },
+    {
+      "number": "40",
+      "title": "Other Forms of International Cooperation",
+      "group": "G. International Cooperation",
+      "key_points": "Exchange information spontaneously and upon request with foreign counterparts.",
+      "cams_domain": "IV"
+    }
+  ],
+  "acronyms": [
+    {
+      "acronym": "ACAMS",
+      "full_name": "Association of Certified Anti-Money Laundering Specialists",
+      "description": "Professional organization offering CAMS certification"
+    },
+    {
+      "acronym": "AML",
+      "full_name": "Anti-Money Laundering",
+      "description": "Laws, regulations, and procedures to prevent money laundering"
+    },
+    {
+      "acronym": "AMLA",
+      "full_name": "Anti-Money Laundering Act of 2020",
+      "description": "Major US AML legislation update"
+    },
+    {
+      "acronym": "APG",
+      "full_name": "Asia/Pacific Group on Money Laundering",
+      "description": "FSRB for Asia-Pacific region"
+    },
+    {
+      "acronym": "AUSTRAC",
+      "full_name": "Australian Transaction Reports and Analysis Centre",
+      "description": "Australia's FIU"
+    },
+    {
+      "acronym": "BMPE",
+      "full_name": "Black Market Peso Exchange",
+      "description": "Trade-based ML method from Colombia"
+    },
+    {
+      "acronym": "BSA",
+      "full_name": "Bank Secrecy Act",
+      "description": "Foundation of US AML regulatory framework (1970)"
+    },
+    {
+      "acronym": "CDD",
+      "full_name": "Customer Due Diligence",
+      "description": "Process of identifying/verifying customers and assessing risk"
+    },
+    {
+      "acronym": "CFT",
+      "full_name": "Countering the Financing of Terrorism",
+      "description": "Measures to prevent terrorist financing"
+    },
+    {
+      "acronym": "CFATF",
+      "full_name": "Caribbean Financial Action Task Force",
+      "description": "FSRB for Caribbean region"
+    },
+    {
+      "acronym": "CICAD",
+      "full_name": "Inter-American Drug Abuse Control Commission",
+      "description": "OAS body addressing drug-related ML"
+    },
+    {
+      "acronym": "CIP",
+      "full_name": "Customer Identification Program",
+      "description": "US requirement for verifying account opener identity"
+    },
+    {
+      "acronym": "CTR",
+      "full_name": "Currency Transaction Report",
+      "description": "US report for cash transactions over $10,000"
+    },
+    {
+      "acronym": "DNFBP",
+      "full_name": "Designated Non-Financial Businesses and Professions",
+      "description": "Non-financial entities with AML obligations"
+    },
+    {
+      "acronym": "EAG",
+      "full_name": "Eurasian Group",
+      "description": "FSRB for Eurasian region"
+    },
+    {
+      "acronym": "EDD",
+      "full_name": "Enhanced Due Diligence",
+      "description": "Additional measures for higher-risk situations"
+    },
+    {
+      "acronym": "ESAAMLG",
+      "full_name": "Eastern and Southern African Anti-Money Laundering Group",
+      "description": "FSRB for Eastern/Southern Africa"
+    },
+    {
+      "acronym": "ESW",
+      "full_name": "Egmont Secure Web",
+      "description": "Secure communication network for FIU information exchange"
+    },
+    {
+      "acronym": "EU",
+      "full_name": "European Union",
+      "description": "Political/economic union with harmonized AML directives"
+    },
+    {
+      "acronym": "FATF",
+      "full_name": "Financial Action Task Force",
+      "description": "Global AML/CFT standard-setting body"
+    },
+    {
+      "acronym": "FIU",
+      "full_name": "Financial Intelligence Unit",
+      "description": "National agency receiving/analyzing suspicious reports"
+    },
+    {
+      "acronym": "FinCEN",
+      "full_name": "Financial Crimes Enforcement Network",
+      "description": "US FIU within Treasury Department"
+    },
+    {
+      "acronym": "FSRB",
+      "full_name": "FATF-Style Regional Body",
+      "description": "Regional organizations promoting FATF standards"
+    },
+    {
+      "acronym": "FTZ",
+      "full_name": "Free Trade Zone",
+      "description": "Area with reduced customs oversight, ML vulnerability"
+    },
+    {
+      "acronym": "GABAC",
+      "full_name": "Task Force on Money Laundering in Central Africa",
+      "description": "FSRB for Central Africa"
+    },
+    {
+      "acronym": "GAFILAT",
+      "full_name": "Financial Action Task Force of Latin America",
+      "description": "FSRB for Latin America"
+    },
+    {
+      "acronym": "GIABA",
+      "full_name": "Inter-Governmental Action Group against ML in West Africa",
+      "description": "FSRB for West Africa"
+    },
+    {
+      "acronym": "ID&V",
+      "full_name": "Identification and Verification",
+      "description": "Process of confirming customer identity"
+    },
+    {
+      "acronym": "IMF",
+      "full_name": "International Monetary Fund",
+      "description": "International organization assisting AML/CFT capacity"
+    },
+    {
+      "acronym": "IVTS",
+      "full_name": "Informal Value Transfer System",
+      "description": "Unofficial money transfer systems (hawala, etc.)"
+    },
+    {
+      "acronym": "KYC",
+      "full_name": "Know Your Customer",
+      "description": "Framework for understanding customer identity and risk"
+    },
+    {
+      "acronym": "KYE",
+      "full_name": "Know Your Employee",
+      "description": "Program to screen and monitor employee ML/TF risk"
+    },
+    {
+      "acronym": "MENAFATF",
+      "full_name": "Middle East and North Africa FATF",
+      "description": "FSRB for MENA region"
+    },
+    {
+      "acronym": "ML",
+      "full_name": "Money Laundering",
+      "description": "Process of disguising criminal proceeds as legitimate"
+    },
+    {
+      "acronym": "MLAT",
+      "full_name": "Mutual Legal Assistance Treaty",
+      "description": "Bilateral agreement for international legal cooperation"
+    },
+    {
+      "acronym": "MONEYVAL",
+      "full_name": "Committee of Experts on Evaluation of AML Measures",
+      "description": "FSRB for Council of Europe members"
+    },
+    {
+      "acronym": "MOU",
+      "full_name": "Memorandum of Understanding",
+      "description": "Cooperation agreement between agencies/FIUs"
+    },
+    {
+      "acronym": "MSB",
+      "full_name": "Money Services Business",
+      "description": "Non-bank financial service provider"
+    },
+    {
+      "acronym": "NCA",
+      "full_name": "National Crime Agency",
+      "description": "UK's law enforcement agency (houses UK FIU)"
+    },
+    {
+      "acronym": "NPO",
+      "full_name": "Non-Profit Organization",
+      "description": "Charitable/social organization vulnerable to TF abuse"
+    },
+    {
+      "acronym": "OAS",
+      "full_name": "Organization of American States",
+      "description": "Regional organization in the Americas"
+    },
+    {
+      "acronym": "OFAC",
+      "full_name": "Office of Foreign Assets Control",
+      "description": "US Treasury bureau administering sanctions"
+    },
+    {
+      "acronym": "PEP",
+      "full_name": "Politically Exposed Person",
+      "description": "Individual with prominent public function"
+    },
+    {
+      "acronym": "PTA",
+      "full_name": "Payable-Through Account",
+      "description": "Account allowing respondent's customers direct access"
+    },
+    {
+      "acronym": "RBA",
+      "full_name": "Risk-Based Approach",
+      "description": "Applying measures proportionate to identified risks"
+    },
+    {
+      "acronym": "SAR",
+      "full_name": "Suspicious Activity Report",
+      "description": "US filing for suspected ML/TF activity"
+    },
+    {
+      "acronym": "SDD",
+      "full_name": "Simplified Due Diligence",
+      "description": "Reduced CDD for lower-risk situations"
+    },
+    {
+      "acronym": "SDN",
+      "full_name": "Specially Designated National",
+      "description": "OFAC-listed person/entity subject to sanctions"
+    },
+    {
+      "acronym": "SHERLOC",
+      "full_name": "Sharing Electronic Resources and Laws on Crime",
+      "description": "UN knowledge portal for ML information"
+    },
+    {
+      "acronym": "STR",
+      "full_name": "Suspicious Transaction Report",
+      "description": "Non-US equivalent of SAR"
+    },
+    {
+      "acronym": "TBML",
+      "full_name": "Trade-Based Money Laundering",
+      "description": "Using trade transactions to disguise/move value"
+    },
+    {
+      "acronym": "TCSP",
+      "full_name": "Trust and Company Service Provider",
+      "description": "Professional creating/managing legal entities"
+    },
+    {
+      "acronym": "TF",
+      "full_name": "Terrorist Financing",
+      "description": "Providing funds for terrorist activities"
+    },
+    {
+      "acronym": "TFS",
+      "full_name": "Targeted Financial Sanctions",
+      "description": "Asset freezing for designated persons/entities"
+    },
+    {
+      "acronym": "UNODC",
+      "full_name": "United Nations Office on Drugs and Crime",
+      "description": "UN body addressing drugs and crime"
+    },
+    {
+      "acronym": "VASP",
+      "full_name": "Virtual Asset Service Provider",
+      "description": "Entity conducting virtual asset business"
+    },
+    {
+      "acronym": "WMD",
+      "full_name": "Weapons of Mass Destruction",
+      "description": "Nuclear, chemical, biological weapons (R.7)"
+    }
+  ],
+  "key_numbers": [
+    {
+      "item": "CTR Filing Threshold (US)",
+      "threshold": "$10,000",
+      "context": "Cash transactions exceeding this in a single business day require CTR filing"
+    },
+    {
+      "item": "CDD Recordkeeping Threshold (US)",
+      "threshold": "$3,000",
+      "context": "Recordkeeping requirements for certain transactions (e.g., wire transfers, money orders)"
+    },
+    {
+      "item": "Wire Transfer Travel Rule (US)",
+      "threshold": "$3,000",
+      "context": "Originator info must accompany wire transfers of this amount or more"
+    },
+    {
+      "item": "Wire Transfer Travel Rule (FATF R.16)",
+      "threshold": "$1,000 / EUR 1,000",
+      "context": "Cross-border transfers above this trigger full originator/beneficiary info requirements"
+    },
+    {
+      "item": "CDD Record Retention",
+      "threshold": "5 years minimum",
+      "context": "FATF R.11: maintain records for at least 5 years after relationship ends or transaction date"
+    },
+    {
+      "item": "SAR Filing Deadline (US)",
+      "threshold": "30 days",
+      "context": "From date of initial detection of suspicious activity (60 days if no suspect identified)"
+    },
+    {
+      "item": "FATF Established",
+      "threshold": "1989",
+      "context": "Created by G7 at Paris summit"
+    },
+    {
+      "item": "FATF Recommendations Revised",
+      "threshold": "Feb 2012",
+      "context": "Current version of 40 Recommendations (amended periodically since)"
+    },
+    {
+      "item": "FATF Members",
+      "threshold": "39",
+      "context": "37 member jurisdictions + 2 regional organizations (EU Commission and Gulf Co-operation Council)"
+    },
+    {
+      "item": "FATF-Style Regional Bodies",
+      "threshold": "9",
+      "context": "APG, CFATF, MONEYVAL, GAFILAT, GIABA, MENAFATF, EAG, ESAAMLG, GABAC"
+    },
+    {
+      "item": "Egmont Group FIU Members",
+      "threshold": "170+",
+      "context": "FIUs worldwide participating in the Egmont Group network"
+    },
+    {
+      "item": "Wolfsberg Group Banks",
+      "threshold": "13",
+      "context": "Global banks in the Wolfsberg Group private sector initiative"
+    },
+    {
+      "item": "OFAC 50% Rule",
+      "threshold": "50%",
+      "context": "Entities owned 50%+ by blocked persons are themselves blocked"
+    },
+    {
+      "item": "BSA Enacted",
+      "threshold": "1970",
+      "context": "Bank Secrecy Act, foundation of US AML framework"
+    },
+    {
+      "item": "USA PATRIOT Act Enacted",
+      "threshold": "2001",
+      "context": "Post-9/11 AML/CFT legislation"
+    },
+    {
+      "item": "AMLA Enacted",
+      "threshold": "2020",
+      "context": "Anti-Money Laundering Act, part of National Defense Authorization Act"
+    },
+    {
+      "item": "Section 314(a) Search Deadline",
+      "threshold": "14 days",
+      "context": "FIs must search records within 14 days of receiving 314(a) request"
+    },
+    {
+      "item": "EU 1st AML Directive",
+      "threshold": "1991",
+      "context": "First EU-wide AML legislation"
+    },
+    {
+      "item": "EU 4th AML Directive",
+      "threshold": "2015",
+      "context": "Risk-based approach, beneficial ownership registers"
+    },
+    {
+      "item": "EU 5th AML Directive",
+      "threshold": "2018",
+      "context": "Public beneficial ownership registers, virtual currency coverage"
+    },
+    {
+      "item": "EU 6th AML Directive",
+      "threshold": "2018",
+      "context": "Harmonized predicate offenses, extended criminal liability"
+    },
+    {
+      "item": "Palermo Convention",
+      "threshold": "2000",
+      "context": "UN Convention broadening ML offense beyond drug trafficking"
+    },
+    {
+      "item": "Vienna Convention",
+      "threshold": "1988",
+      "context": "First international treaty criminalizing money laundering"
+    },
+    {
+      "item": "CAMS Exam Questions",
+      "threshold": "120",
+      "context": "Multiple-choice questions on the CAMS exam"
+    },
+    {
+      "item": "CAMS Exam Time",
+      "threshold": "3.5 hours (210 min)",
+      "context": "Time allowed for the CAMS exam"
+    },
+    {
+      "item": "CAMS Passing Score",
+      "threshold": "~75 correct (62.5%)",
+      "context": "Approximate passing threshold"
+    }
+  ]
+}

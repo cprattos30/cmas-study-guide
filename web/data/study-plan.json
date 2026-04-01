@@ -1,0 +1,886 @@
+{
+  "days": [
+    {
+      "day": 1,
+      "date": "Mon 3/31",
+      "title": "Orientation + Domain I Start",
+      "week": "Week 1: Foundation (March 31 - April 6)",
+      "tasks": [
+        {
+          "text": "Read this study plan fully",
+          "id": "day1_task0"
+        },
+        {
+          "text": "Skim all 5 condensed study guide chapters to get the big picture",
+          "id": "day1_task1"
+        },
+        {
+          "text": "Review the glossary spreadsheet -- star terms you don't know",
+          "id": "day1_task2"
+        },
+        {
+          "text": "**Domain I:** Overview -- What is ML, Three Stages (Placement/Layering/Integration)",
+          "id": "day1_task3"
+        },
+        {
+          "text": "**Domain I:** Economic and Social Consequences of ML",
+          "id": "day1_task4"
+        }
+      ]
+    },
+    {
+      "day": 2,
+      "date": "Tue 4/1",
+      "title": "Domain I: Banks & Depository Institutions",
+      "week": "Week 1: Foundation (March 31 - April 6)",
+      "tasks": [
+        {
+          "text": "Electronic Transfer of Funds, Remote Deposit Capture",
+          "id": "day2_task0"
+        },
+        {
+          "text": "Correspondent Banking (key concept -- know the risks deeply)",
+          "id": "day2_task1"
+        },
+        {
+          "text": "Payable-Through Accounts vs. Correspondent Banking (know the difference)",
+          "id": "day2_task2"
+        },
+        {
+          "text": "Concentration Accounts",
+          "id": "day2_task3"
+        },
+        {
+          "text": "Private Banking and PEPs (Politically Exposed Persons)",
+          "id": "day2_task4"
+        }
+      ]
+    },
+    {
+      "day": 3,
+      "date": "Wed 4/2",
+      "title": "Domain I: Banks (cont.) + Nonbank FIs",
+      "week": "Week 1: Foundation (March 31 - April 6)",
+      "tasks": [
+        {
+          "text": "Structuring and Microstructuring (know the thresholds and how they work)",
+          "id": "day3_task0"
+        },
+        {
+          "text": "Credit Unions and Building Societies",
+          "id": "day3_task1"
+        },
+        {
+          "text": "Credit Card Industry ML risks",
+          "id": "day3_task2"
+        },
+        {
+          "text": "Third-Party Payment Processors",
+          "id": "day3_task3"
+        },
+        {
+          "text": "Money Services Businesses (MSBs)",
+          "id": "day3_task4"
+        }
+      ]
+    },
+    {
+      "day": 4,
+      "date": "Thu 4/3",
+      "title": "Domain I: Nonbank FIs + Nonfinancial Businesses",
+      "week": "Week 1: Foundation (March 31 - April 6)",
+      "tasks": [
+        {
+          "text": "Insurance Companies (single premium, early cancellation red flags)",
+          "id": "day4_task0"
+        },
+        {
+          "text": "Securities Broker-Dealers (wash trading, layering in securities)",
+          "id": "day4_task1"
+        },
+        {
+          "text": "Casinos (chip purchases, minimal gaming, cash-out patterns)",
+          "id": "day4_task2"
+        },
+        {
+          "text": "Dealers in High-Value Items (precious metals, jewelry, art)",
+          "id": "day4_task3"
+        }
+      ]
+    },
+    {
+      "day": 5,
+      "date": "Fri 4/4",
+      "title": "Domain I: Nonfinancial + Trade + New Payment",
+      "week": "Week 1: Foundation (March 31 - April 6)",
+      "tasks": [
+        {
+          "text": "Gatekeepers: Notaries, Accountants, Auditors, Lawyers",
+          "id": "day5_task0"
+        },
+        {
+          "text": "Trust and Company Service Providers (TCSPs)",
+          "id": "day5_task1"
+        },
+        {
+          "text": "Real Estate ML vulnerabilities",
+          "id": "day5_task2"
+        },
+        {
+          "text": "International Trade Activity: Free Trade Zones, TBML",
+          "id": "day5_task3"
+        },
+        {
+          "text": "Black Market Peso Exchange (BMPE)",
+          "id": "day5_task4"
+        }
+      ]
+    },
+    {
+      "day": 6,
+      "date": "Sat 4/5",
+      "title": "Domain I: New Payment + Corporate Vehicles + TF",
+      "week": "Week 1: Foundation (March 31 - April 6)",
+      "tasks": [
+        {
+          "text": "Prepaid Cards, Mobile Payments, Internet-Based Payment Services",
+          "id": "day6_task0"
+        },
+        {
+          "text": "Virtual Currency / Cryptocurrency (growing exam topic)",
+          "id": "day6_task1"
+        },
+        {
+          "text": "Corporate Vehicles: Shell companies, Shelf companies, Trusts",
+          "id": "day6_task2"
+        },
+        {
+          "text": "Beneficial ownership concealment methods",
+          "id": "day6_task3"
+        }
+      ]
+    },
+    {
+      "day": 7,
+      "date": "Sun 4/6",
+      "title": "Domain I: Terrorist Financing + Week 1 Review",
+      "week": "Week 1: Foundation (March 31 - April 6)",
+      "tasks": [
+        {
+          "text": "Differences between TF and ML (funds can be from legitimate sources!)",
+          "id": "day7_task0"
+        },
+        {
+          "text": "How terrorists raise, move, and store funds",
+          "id": "day7_task1"
+        },
+        {
+          "text": "Hawala and other Informal Value Transfer Systems (IVTS)",
+          "id": "day7_task2"
+        },
+        {
+          "text": "Charities/NPOs and TF risks",
+          "id": "day7_task3"
+        },
+        {
+          "text": "Emerging risks: cryptocurrency, social media, crowdfunding",
+          "id": "day7_task4"
+        },
+        {
+          "text": "**REVIEW:** Go through Domain I glossary terms, re-read weak areas",
+          "id": "day7_task5"
+        }
+      ]
+    },
+    {
+      "day": 8,
+      "date": "Mon 4/7",
+      "title": "Domain II: FATF Foundations",
+      "week": "Week 2: International Standards (April 7 - April 13)",
+      "tasks": [
+        {
+          "text": "FATF: History, objectives, formation (G7, 1989)",
+          "id": "day8_task0"
+        },
+        {
+          "text": "FATF 40 Recommendations overview (groups A-G)",
+          "id": "day8_task1"
+        },
+        {
+          "text": "Mutual Evaluations process",
+          "id": "day8_task2"
+        },
+        {
+          "text": "FATF Members vs. Observers vs. Associate Members",
+          "id": "day8_task3"
+        },
+        {
+          "text": "Noncooperative Countries (grey list / black list concept)",
+          "id": "day8_task4"
+        }
+      ]
+    },
+    {
+      "day": 9,
+      "date": "Tue 4/8",
+      "title": "FATF Interpretive Notes Deep Dive (Part 1)",
+      "week": "Week 2: International Standards (April 7 - April 13)",
+      "tasks": [
+        {
+          "text": "Read 05-FATF-Interpretive-Notes.md in full",
+          "id": "day9_task0"
+        },
+        {
+          "text": "Focus on R.1 (Risk-Based Approach) -- the foundation of everything",
+          "id": "day9_task1"
+        },
+        {
+          "text": "R.10 (CDD) -- the most important recommendation for the exam",
+          "id": "day9_task2"
+        },
+        {
+          "text": "R.12 (PEPs) -- definition, family/associates, foreign vs. domestic",
+          "id": "day9_task3"
+        },
+        {
+          "text": "R.15 (New Technologies / VASPs) -- increasingly tested",
+          "id": "day9_task4"
+        }
+      ]
+    },
+    {
+      "day": 10,
+      "date": "Wed 4/9",
+      "title": "FATF Interpretive Notes Deep Dive (Part 2)",
+      "week": "Week 2: International Standards (April 7 - April 13)",
+      "tasks": [
+        {
+          "text": "R.16 (Wire Transfers / Travel Rule) -- know the information requirements",
+          "id": "day10_task0"
+        },
+        {
+          "text": "R.20 (Suspicious Transaction Reporting) -- no threshold, attempted tx count",
+          "id": "day10_task1"
+        },
+        {
+          "text": "R.24/25 (Beneficial Ownership of Legal Persons/Arrangements)",
+          "id": "day10_task2"
+        },
+        {
+          "text": "R.6/7 (Targeted Financial Sanctions -- terrorism and proliferation)",
+          "id": "day10_task3"
+        },
+        {
+          "text": "R.13 (Correspondent Banking) -- shell bank prohibition",
+          "id": "day10_task4"
+        }
+      ]
+    },
+    {
+      "day": 11,
+      "date": "Thu 4/10",
+      "title": "Domain II: Basel Committee + EU Directives",
+      "week": "Week 2: International Standards (April 7 - April 13)",
+      "tasks": [
+        {
+          "text": "Basel Committee: History, KYC paper, Sound Management guidance",
+          "id": "day11_task0"
+        },
+        {
+          "text": "Correspondent Banking annexes (Basel)",
+          "id": "day11_task1"
+        },
+        {
+          "text": "EU Directives progression: 1st through 6th",
+          "id": "day11_task2"
+        },
+        {
+          "text": "Key changes per directive (focus on 4th, 5th, 6th -- most recent)",
+          "id": "day11_task3"
+        },
+        {
+          "text": "EU AML Authority (AMLA) -- new centralized supervisor",
+          "id": "day11_task4"
+        }
+      ]
+    },
+    {
+      "day": 12,
+      "date": "Fri 4/11",
+      "title": "Domain II: FSRBs + Other Bodies",
+      "week": "Week 2: International Standards (April 7 - April 13)",
+      "tasks": [
+        {
+          "text": "FATF-Style Regional Bodies: APG, CFATF, MONEYVAL, GAFILAT, etc.",
+          "id": "day12_task0"
+        },
+        {
+          "text": "Know what region each covers (likely tested)",
+          "id": "day12_task1"
+        },
+        {
+          "text": "Egmont Group (FIU network, Egmont Secure Web)",
+          "id": "day12_task2"
+        },
+        {
+          "text": "Wolfsberg Group (private sector banking principles)",
+          "id": "day12_task3"
+        },
+        {
+          "text": "World Bank and IMF roles in AML/CFT",
+          "id": "day12_task4"
+        }
+      ]
+    },
+    {
+      "day": 13,
+      "date": "Sat 4/12",
+      "title": "Domain II: US Law",
+      "week": "Week 2: International Standards (April 7 - April 13)",
+      "tasks": [
+        {
+          "text": "Bank Secrecy Act (BSA) 1970 -- foundation of US AML",
+          "id": "day13_task0"
+        },
+        {
+          "text": "USA PATRIOT Act: Key sections (311, 312, 313, 314, 326)",
+          "id": "day13_task1"
+        },
+        {
+          "text": "Anti-Money Laundering Act of 2020 (AMLA) -- beneficial ownership, whistleblower",
+          "id": "day13_task2"
+        },
+        {
+          "text": "OFAC: SDN List, 50% rule, sanctions programs",
+          "id": "day13_task3"
+        },
+        {
+          "text": "Reach of US criminal ML laws (extraterritorial jurisdiction)",
+          "id": "day13_task4"
+        }
+      ]
+    },
+    {
+      "day": 14,
+      "date": "Sun 4/13",
+      "title": "Week 2 Review",
+      "week": "Week 2: International Standards (April 7 - April 13)",
+      "tasks": [
+        {
+          "text": "Review Domain II glossary terms",
+          "id": "day14_task0"
+        },
+        {
+          "text": "Create a one-page cheat sheet of all organizations/bodies and what they do",
+          "id": "day14_task1"
+        },
+        {
+          "text": "Quiz yourself: Given a scenario, which FATF Recommendation applies?",
+          "id": "day14_task2"
+        },
+        {
+          "text": "Re-read any weak areas from Domain I or II",
+          "id": "day14_task3"
+        }
+      ]
+    },
+    {
+      "day": 15,
+      "date": "Mon 4/14",
+      "title": "Domain III: Risk Assessment",
+      "week": "Week 3: Compliance Programs -- The Big One (April 14 - April 20)",
+      "tasks": [
+        {
+          "text": "AML/CFT Risk Models and frameworks",
+          "id": "day15_task0"
+        },
+        {
+          "text": "Risk Scoring methodologies",
+          "id": "day15_task1"
+        },
+        {
+          "text": "Dynamic Risk Assessment of customers",
+          "id": "day15_task2"
+        },
+        {
+          "text": "AML/CFT Risk Identification: products, services, customers, geographies",
+          "id": "day15_task3"
+        },
+        {
+          "text": "High-risk vs. low-risk indicators",
+          "id": "day15_task4"
+        }
+      ]
+    },
+    {
+      "day": 16,
+      "date": "Tue 4/15",
+      "title": "Domain III: Program Elements",
+      "week": "Week 3: Compliance Programs -- The Big One (April 14 - April 20)",
+      "tasks": [
+        {
+          "text": "The Four Pillars of an AML/CFT Program (US: five pillars with beneficial ownership)",
+          "id": "day16_task0"
+        },
+        {
+          "text": "System of Internal Policies, Procedures, and Controls",
+          "id": "day16_task1"
+        },
+        {
+          "text": "The Compliance Function and Compliance Officer role",
+          "id": "day16_task2"
+        },
+        {
+          "text": "Compliance Officer responsibilities and personal liability",
+          "id": "day16_task3"
+        },
+        {
+          "text": "Board/Senior Management oversight requirements",
+          "id": "day16_task4"
+        }
+      ]
+    },
+    {
+      "day": 17,
+      "date": "Wed 4/16",
+      "title": "Domain III: Training + Audit + Culture",
+      "week": "Week 3: Compliance Programs -- The Big One (April 14 - April 20)",
+      "tasks": [
+        {
+          "text": "AML/CFT Training: who, what, when, how often",
+          "id": "day17_task0"
+        },
+        {
+          "text": "Independent Audit: scope, frequency, qualifications of auditors",
+          "id": "day17_task1"
+        },
+        {
+          "text": "Independent testing vs. internal audit",
+          "id": "day17_task2"
+        },
+        {
+          "text": "Establishing a Culture of Compliance",
+          "id": "day17_task3"
+        },
+        {
+          "text": "Tone from the top, consequences of poor culture (case examples)",
+          "id": "day17_task4"
+        }
+      ]
+    },
+    {
+      "day": 18,
+      "date": "Thu 4/17",
+      "title": "Domain III: KYC/CDD",
+      "week": "Week 3: Compliance Programs -- The Big One (April 14 - April 20)",
+      "tasks": [
+        {
+          "text": "Customer Due Diligence: the 5 main elements",
+          "id": "day18_task0"
+        },
+        {
+          "text": "CDD vs. EDD vs. SDD -- when each applies",
+          "id": "day18_task1"
+        },
+        {
+          "text": "Enhanced Due Diligence for High-Risk Customers",
+          "id": "day18_task2"
+        },
+        {
+          "text": "Account Opening, Customer Identification, and Verification",
+          "id": "day18_task3"
+        },
+        {
+          "text": "Consolidated CDD (group-wide approach)",
+          "id": "day18_task4"
+        },
+        {
+          "text": "Ongoing monitoring obligations",
+          "id": "day18_task5"
+        }
+      ]
+    },
+    {
+      "day": 19,
+      "date": "Fri 4/18",
+      "title": "Domain III: Monitoring & Screening",
+      "week": "Week 3: Compliance Programs -- The Big One (April 14 - April 20)",
+      "tasks": [
+        {
+          "text": "Economic Sanctions overview and compliance",
+          "id": "day19_task0"
+        },
+        {
+          "text": "Sanctions List Screening (SDN, consolidated lists)",
+          "id": "day19_task1"
+        },
+        {
+          "text": "PEP Screening -- sources, ongoing monitoring",
+          "id": "day19_task2"
+        },
+        {
+          "text": "Know Your Employee (KYE)",
+          "id": "day19_task3"
+        },
+        {
+          "text": "Suspicious and Unusual Transaction Monitoring",
+          "id": "day19_task4"
+        },
+        {
+          "text": "Automated AML/CFT Solutions (tuning, false positives)",
+          "id": "day19_task5"
+        }
+      ]
+    },
+    {
+      "day": 20,
+      "date": "Sat 4/19",
+      "title": "Domain III: RED FLAGS (Part 1) -- CRITICAL",
+      "week": "Week 3: Compliance Programs -- The Big One (April 14 - April 20)",
+      "tasks": [
+        {
+          "text": "Unusual Customer Behavior",
+          "id": "day20_task0"
+        },
+        {
+          "text": "Unusual Customer Identification Circumstances",
+          "id": "day20_task1"
+        },
+        {
+          "text": "Unusual Cash Transactions",
+          "id": "day20_task2"
+        },
+        {
+          "text": "Unusual Noncash Deposits",
+          "id": "day20_task3"
+        },
+        {
+          "text": "Unusual Wire Transfer Transactions",
+          "id": "day20_task4"
+        },
+        {
+          "text": "Unusual Safe Deposit Box Activity",
+          "id": "day20_task5"
+        },
+        {
+          "text": "Unusual Activity in Credit Transactions",
+          "id": "day20_task6"
+        },
+        {
+          "text": "Unusual Commercial Account Activity",
+          "id": "day20_task7"
+        }
+      ]
+    },
+    {
+      "day": 21,
+      "date": "Sun 4/20",
+      "title": "Domain III: RED FLAGS (Part 2) -- CRITICAL",
+      "week": "Week 3: Compliance Programs -- The Big One (April 14 - April 20)",
+      "tasks": [
+        {
+          "text": "Unusual Trade Financing Transactions (TBML red flags)",
+          "id": "day21_task0"
+        },
+        {
+          "text": "Unusual Investment Activity",
+          "id": "day21_task1"
+        },
+        {
+          "text": "Other Unusual Customer Activity",
+          "id": "day21_task2"
+        },
+        {
+          "text": "Unusual Employee Activity",
+          "id": "day21_task3"
+        },
+        {
+          "text": "Unusual Activity: Money Remitters / Currency Exchanges",
+          "id": "day21_task4"
+        },
+        {
+          "text": "Unusual Activity: Virtual Currency",
+          "id": "day21_task5"
+        },
+        {
+          "text": "Unusual Activity: Insurance, Broker-Dealer, Real Estate",
+          "id": "day21_task6"
+        },
+        {
+          "text": "Unusual Activity: Human Smuggling/Trafficking, TF, Cyber Crime",
+          "id": "day21_task7"
+        },
+        {
+          "text": "**This is the most tested material -- review until you know these cold**",
+          "id": "day21_task8"
+        }
+      ]
+    },
+    {
+      "day": 22,
+      "date": "Mon 4/21",
+      "title": "Domain IV: Internal Investigations",
+      "week": "Week 4: Investigations + Review (April 21 - April 27)",
+      "tasks": [
+        {
+          "text": "Sources of investigations (internal referrals, monitoring alerts, tips, media)",
+          "id": "day22_task0"
+        },
+        {
+          "text": "Conducting the investigation: gathering evidence, documentation",
+          "id": "day22_task1"
+        },
+        {
+          "text": "Interview techniques and best practices",
+          "id": "day22_task2"
+        },
+        {
+          "text": "SAR Decision-Making Process (when, what, timing, confidentiality)",
+          "id": "day22_task3"
+        },
+        {
+          "text": "Consequences of failing to report SARs (case examples)",
+          "id": "day22_task4"
+        }
+      ]
+    },
+    {
+      "day": 23,
+      "date": "Tue 4/22",
+      "title": "Domain IV: SARs + Account Closure",
+      "week": "Week 4: Investigations + Review (April 21 - April 27)",
+      "tasks": [
+        {
+          "text": "SAR filing requirements (timing, content, no tipping off)",
+          "id": "day23_task0"
+        },
+        {
+          "text": "Closing the Account -- factors to consider, documentation",
+          "id": "day23_task1"
+        },
+        {
+          "text": "Communicating with law enforcement on SARs",
+          "id": "day23_task2"
+        },
+        {
+          "text": "Section 314(a) and 314(b) information sharing",
+          "id": "day23_task3"
+        },
+        {
+          "text": "Safe harbor protections for SAR filers",
+          "id": "day23_task4"
+        }
+      ]
+    },
+    {
+      "day": 24,
+      "date": "Wed 4/23",
+      "title": "Domain IV: Law Enforcement + International",
+      "week": "Week 4: Investigations + Review (April 21 - April 27)",
+      "tasks": [
+        {
+          "text": "Responding to law enforcement investigations",
+          "id": "day24_task0"
+        },
+        {
+          "text": "Cooperating with law enforcement during an investigation",
+          "id": "day24_task1"
+        },
+        {
+          "text": "Obtaining counsel, employee notices, media relations",
+          "id": "day24_task2"
+        },
+        {
+          "text": "AML/CFT cooperation between countries",
+          "id": "day24_task3"
+        },
+        {
+          "text": "MLATs, FIUs (FinCEN, AUSTRAC, NCA), SHERLOC",
+          "id": "day24_task4"
+        },
+        {
+          "text": "Egmont Group principles of information exchange",
+          "id": "day24_task5"
+        }
+      ]
+    },
+    {
+      "day": 25,
+      "date": "Thu 4/24",
+      "title": "Comprehensive Review Day 1",
+      "week": "Week 4: Investigations + Review (April 21 - April 27)",
+      "tasks": [
+        {
+          "text": "Re-read Domain III condensed guide (highest weight)",
+          "id": "day25_task0"
+        },
+        {
+          "text": "Review all red flags -- quiz yourself",
+          "id": "day25_task1"
+        },
+        {
+          "text": "Go through glossary -- focus on terms you keep forgetting",
+          "id": "day25_task2"
+        },
+        {
+          "text": "Review FATF Interpretive Notes quick-reference table",
+          "id": "day25_task3"
+        }
+      ]
+    },
+    {
+      "day": 26,
+      "date": "Fri 4/25",
+      "title": "Comprehensive Review Day 2",
+      "week": "Week 4: Investigations + Review (April 21 - April 27)",
+      "tasks": [
+        {
+          "text": "Re-read Domain I condensed guide",
+          "id": "day26_task0"
+        },
+        {
+          "text": "Focus on: Three stages of ML, TBML, virtual currency, TF vs ML differences",
+          "id": "day26_task1"
+        },
+        {
+          "text": "Re-read Domain II condensed guide",
+          "id": "day26_task2"
+        },
+        {
+          "text": "Focus on: FATF recommendations, EU Directives, US law key provisions",
+          "id": "day26_task3"
+        }
+      ]
+    },
+    {
+      "day": 27,
+      "date": "Sat 4/26",
+      "title": "Practice Scenarios",
+      "week": "Week 4: Investigations + Review (April 21 - April 27)",
+      "tasks": [
+        {
+          "text": "Work through case examples from the study guide -- cover your answers first",
+          "id": "day27_task0"
+        },
+        {
+          "text": "For each scenario ask: What red flags? What stage of ML? What should the compliance officer do?",
+          "id": "day27_task1"
+        },
+        {
+          "text": "Review the \"Key Exam Points\" boxes in all condensed guides",
+          "id": "day27_task2"
+        },
+        {
+          "text": "Time yourself: Can you analyze a scenario in under 2 minutes?",
+          "id": "day27_task3"
+        }
+      ]
+    },
+    {
+      "day": 28,
+      "date": "Sun 4/27",
+      "title": "Weak Area Deep Dive",
+      "week": "Week 4: Investigations + Review (April 21 - April 27)",
+      "tasks": [
+        {
+          "text": "Identify your 3-5 weakest topics from review",
+          "id": "day28_task0"
+        },
+        {
+          "text": "Go back to the full PDF for those sections and re-read in depth",
+          "id": "day28_task1"
+        },
+        {
+          "text": "Create mnemonics or memory aids for anything you struggle with",
+          "id": "day28_task2"
+        },
+        {
+          "text": "Review multi-select question strategy (see exam tips below)",
+          "id": "day28_task3"
+        }
+      ]
+    },
+    {
+      "day": 29,
+      "date": "Mon 4/28",
+      "title": "Glossary + High-Yield Review",
+      "week": "Final Push (April 28-30)",
+      "tasks": [
+        {
+          "text": "Go through the entire glossary one more time",
+          "id": "day29_task0"
+        },
+        {
+          "text": "Review the FATF 40 Recommendations table",
+          "id": "day29_task1"
+        },
+        {
+          "text": "Review all organization acronyms (FATF, FSRBs, Egmont, Wolfsberg, Basel, etc.)",
+          "id": "day29_task2"
+        },
+        {
+          "text": "Review key US law provisions (BSA, PATRIOT Act sections, AMLA 2020)",
+          "id": "day29_task3"
+        },
+        {
+          "text": "Review key EU Directives (what changed with 4th, 5th, 6th)",
+          "id": "day29_task4"
+        }
+      ]
+    },
+    {
+      "day": 30,
+      "date": "Tue 4/29",
+      "title": "Simulation Day",
+      "week": "Final Push (April 28-30)",
+      "tasks": [
+        {
+          "text": "Do a timed practice session: 120 questions in 3.5 hours if you have practice materials",
+          "id": "day30_task0"
+        },
+        {
+          "text": "If no practice test available: spend 3.5 hours going through all \"Key Exam Points\" boxes",
+          "id": "day30_task1"
+        },
+        {
+          "text": "Review any questions you got wrong or were unsure about",
+          "id": "day30_task2"
+        },
+        {
+          "text": "Light review only in the evening -- don't cram new material",
+          "id": "day30_task3"
+        }
+      ]
+    },
+    {
+      "day": 31,
+      "date": "Wed 4/30",
+      "title": "Day Before Exam",
+      "week": "Final Push (April 28-30)",
+      "tasks": [
+        {
+          "text": "Light review only (1 hour max)",
+          "id": "day31_task0"
+        },
+        {
+          "text": "Skim your personal weak-area notes",
+          "id": "day31_task1"
+        },
+        {
+          "text": "Review exam logistics: location, time, what to bring (ID), what's not allowed",
+          "id": "day31_task2"
+        },
+        {
+          "text": "Get a good night's sleep",
+          "id": "day31_task3"
+        },
+        {
+          "text": "Prepare for the next day: set alarms, plan your route, eat well",
+          "id": "day31_task4"
+        }
+      ]
+    }
+  ],
+  "exam_date": "2026-05-01",
+  "start_date": "2026-03-31"
+}

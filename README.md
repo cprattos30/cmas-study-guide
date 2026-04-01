@@ -52,14 +52,39 @@ Condensed study materials for the **Certified Anti-Money Laundering Specialist (
 
 ---
 
+## Interactive Study Platform (Recommended)
+
+The best way to use these materials is through the interactive local study platform:
+
+### How to Launch (macOS)
+1. **Double-click** the file `web/start.command` in Finder
+2. Your browser opens automatically to the study platform
+3. Keep the Terminal window open while studying (close it when done)
+
+That's it -- no installs needed. Python 3 comes with your Mac.
+
+### What You Get
+- All 5 study guides rendered with nice formatting and navigation
+- Searchable glossary with filters by domain
+- Flashcard mode for vocab drilling (tracks what you know vs. need to review)
+- Interactive 31-day study plan with checkboxes (progress saves automatically)
+- Full-text search across everything
+- Exam countdown
+- Dark/light mode
+
+All your progress is saved in your browser and persists between sessions.
+
+---
+
 ## How to Use These Materials
 
-1. **Start with the Study Plan** -- [`Study-Plan-31-Days.md`](Study-Plan-31-Days.md) maps out what to study each day
-2. **Read the condensed guides** -- Each domain guide distills ~100 pages into high-yield summaries
-3. **Use the glossary for vocab** -- Open [`CAMS-Glossary.xlsx`](CAMS-Glossary.xlsx) and drill terms daily
-4. **Reference the FATF guide** -- The study guide itself says the FATF 40 Recs deserve "particular study"
-5. **Go back to the full PDF** for depth on topics you find difficult
-6. **Focus on red flags** -- Domain III's red flags section is one of the most heavily tested areas
+1. **Launch the study platform** -- Double-click `web/start.command` (or read on GitHub)
+2. **Follow the Study Plan** -- 31-day calendar with daily goals, weighted by domain importance
+3. **Read the condensed guides** -- Each domain guide distills ~100 pages into high-yield summaries
+4. **Drill vocab daily** -- Use the Flashcards tab or open [`CAMS-Glossary.xlsx`](CAMS-Glossary.xlsx)
+5. **Reference the FATF guide** -- The study guide itself says the FATF 40 Recs deserve "particular study"
+6. **Cross-reference the PDF** -- Every section has `(p. XX)` references to the source PDF page
+7. **Focus on red flags** -- Domain III's red flags section is one of the most heavily tested areas
 
 ## Key Study Principles
 

@@ -2,9 +2,13 @@
 
 > **Study Priority:** The CAMS Study Guide (Appendix, p. 393) explicitly states: *"Two documents above all others (FATF's 40 Recommendations and Interpretive Notes) should receive particular study from CAMS candidates."* This chapter is your comprehensive reference to both.
 
+> **Important:** FATF standards are continuously updated. Claims about specific FATF actions, list compositions, and amendments in this guide should be verified against the official FATF website ([fatf-gafi.org](https://www.fatf-gafi.org)) before your exam. Last verified: March 31, 2026.
+
 ---
 
 ## 1. What Is the FATF?
+
+*(CAMS Study Guide, pp. 153-157 -- FATF overview, objectives, and three main activities)*
 
 The **Financial Action Task Force (FATF)** is an inter-governmental policy-making body established in 1989 by the G-7 Summit in Paris. Its mandate is to set standards and promote effective implementation of legal, regulatory, and operational measures for combating **money laundering (ML)**, **terrorist financing (TF)**, **proliferation financing (PF)**, and other related threats to the integrity of the international financial system.
 
@@ -17,8 +21,8 @@ The **Financial Action Task Force (FATF)** is an inter-governmental policy-makin
 | **Members** | 40 members (38 jurisdictions + 2 regional organizations: the European Commission and the Gulf Co-operation Council) |
 | **Global Network** | Over 200 jurisdictions committed via FATF + 9 FATF-Style Regional Bodies (FSRBs) |
 | **Core Output** | The 40 Recommendations (first issued 1990; comprehensively revised 2012; continuously updated) |
-| **Current Standards** | Updated through October 2025 (includes Feb 2025 financial inclusion amendments, June 2025 R.16 revision) |
-| **Evaluation Cycle** | Currently in the 5th Round of Mutual Evaluations (began 2024; 6-year cycle) |
+| **Current Standards** | Updated through October 2025 (includes [Feb 2025 financial inclusion amendments](https://www.fatf-gafi.org/en/publications/Fatfrecommendations/update-standards-promote-financial-conclusion-feb-2025.html), [June 2025 R.16 revision](https://www.fatf-gafi.org/en/publications/Fatfrecommendations/update-Recommendation-16-payment-transparency-june-2025.html)). Source: [FATF Plenary Outcomes, October 2025](https://www.fatf-gafi.org/en/publications/Fatfgeneral/outcomes-FATF-plenary-october-2025.html) |
+| **Evaluation Cycle** | Currently in the [5th Round of Mutual Evaluations](https://www.fatf-gafi.org/en/publications/Mutualevaluations/5th-Round-Procedures.html) (began 2024; [6-year cycle](https://www.fatf-gafi.org/en/publications/Mutualevaluations/5th-Round-Methodology.html)) |
 
 ### FATF-Style Regional Bodies (FSRBs)
 
@@ -52,6 +56,8 @@ The Interpretive Notes specify the *operational detail* -- the "who, what, when,
 
 ## 3. The 40 Recommendations -- Organized by Group
 
+*(CAMS Study Guide, pp. 158-159 -- overview of 40 Recommendations and Interpretive Notes; [Full text of FATF Recommendations](https://www.fatf-gafi.org/en/publications/Fatfrecommendations/Fatf-recommendations.html))*
+
 The 40 Recommendations are divided into **seven thematic groups (A through G)**. The table below provides the complete structure, with CAMS-critical Recommendations marked with a star.
 
 | Group | Theme | Recommendations |
@@ -72,6 +78,8 @@ The 40 Recommendations are divided into **seven thematic groups (A through G)**.
 
 ### Recommendation 1: Assessing Risks and Applying a Risk-Based Approach ★★★
 
+*(CAMS Study Guide, pp. 153-159; [FATF Recommendations](https://www.fatf-gafi.org/en/publications/Fatfrecommendations/Fatf-recommendations.html))*
+
 **The Recommendation (summarized):**
 Countries should identify, assess, and understand the ML/TF/PF risks they face, and should apply a **risk-based approach (RBA)** to ensure that measures to prevent or mitigate ML/TF are **proportionate** to the risks identified.
 
@@ -86,7 +94,7 @@ Countries should identify, assess, and understand the ML/TF/PF risks they face, 
 | **Supervisory Oversight** | Supervisors must review risk profiles and risk assessments prepared by FIs and DNFBPs |
 | **Documentation** | Risk assessments must be documented and kept up to date |
 
-**February 2025 Amendment -- Financial Inclusion Changes:**
+**[February 2025 Amendment](https://www.fatf-gafi.org/en/publications/Fatfrecommendations/update-standards-promote-financial-conclusion-feb-2025.html) -- Financial Inclusion Changes** *(CAMS Study Guide, pp. 153-159)*:
 - The word **"commensurate"** was replaced with **"proportionate"** throughout the Standards, clarifying that measures should appropriately correspond to identified risk levels
 - Explicit requirement for countries to **allow and encourage simplified measures** in lower-risk scenarios
 - Non-face-to-face transactions are only considered potentially higher-risk where **appropriate risk mitigation measures have not been implemented** (recognizing that digital interaction is now standard)
@@ -105,6 +113,8 @@ Countries should have national AML/CFT/CPF policies informed by identified risks
 ## 5. Group B -- Money Laundering and Confiscation (R.3-R.4)
 
 ### Recommendation 3: Money Laundering Offense ★★
+
+*(CAMS Study Guide, pp. 158-159; [FATF Recommendations](https://www.fatf-gafi.org/en/publications/Fatfrecommendations/Fatf-recommendations.html))*
 
 **The Recommendation (summarized):**
 Countries should criminalize money laundering on the basis of the **Vienna Convention** (1988) and the **Palermo Convention** (2000). The offense should apply to **all serious offences**, with a view to including the **widest range of predicate offences**.
@@ -146,6 +156,8 @@ Countries should adopt measures to enable the confiscation of proceeds of crime,
 
 ### Recommendation 5: Terrorist Financing Offense ★★
 
+*(CAMS Study Guide, pp. 141-152 -- TF detection and case examples; [FATF Recommendations](https://www.fatf-gafi.org/en/publications/Fatfrecommendations/Fatf-recommendations.html))*
+
 **The Recommendation (summarized):**
 Countries should criminalize terrorist financing on the basis of the **International Convention for the Suppression of the Financing of Terrorism** (1999).
 
@@ -161,6 +173,8 @@ Countries should criminalize terrorist financing on the basis of the **Internati
 > **Key Exam Point:** The crucial distinction from R.3: TF does not require proceeds of crime. Funds can be entirely **legitimate** in origin. The crime is the *purpose* (financing terrorism), not the *source*. Also, no link to a specific attack is needed -- financing a terrorist organization is sufficient.
 
 ### Recommendation 6: Targeted Financial Sanctions Related to Terrorism and TF ★★
+
+*([FATF Recommendations](https://www.fatf-gafi.org/en/publications/Fatfrecommendations/Fatf-recommendations.html))*
 
 **The Recommendation (summarized):**
 Countries must implement **targeted financial sanctions (TFS)** without delay to comply with UN Security Council Resolutions relating to the prevention and suppression of terrorism and terrorist financing.
@@ -200,6 +214,8 @@ Countries must implement targeted financial sanctions to comply with UNSCRs rela
 
 ### Recommendation 8: Non-Profit Organizations ★
 
+*(CAMS Study Guide, pp. 142-147 -- NPO abuse case examples; [FATF Recommendations](https://www.fatf-gafi.org/en/publications/Fatfrecommendations/Fatf-recommendations.html))*
+
 **The Recommendation (summarized):**
 Countries should review the adequacy of their laws and regulations relating to NPOs that the country has identified as being vulnerable to terrorist financing abuse, and should apply **focused, proportionate, and risk-based measures** to protect them from TF abuse.
 
@@ -227,6 +243,8 @@ Countries should ensure that financial institution secrecy laws do **not** inhib
 ---
 
 ### Recommendation 10: Customer Due Diligence ★★★★★
+
+*(CAMS Study Guide, pp. 158-159 -- CDD in FATF context; [FATF Recommendations](https://www.fatf-gafi.org/en/publications/Fatfrecommendations/Fatf-recommendations.html))*
 
 **This is the single most important Recommendation for the CAMS exam.**
 
@@ -268,13 +286,13 @@ The **beneficial owner** is the natural person(s) who ultimately **owns or contr
 | **When applied** | Lower-risk situations identified through risk assessment | Higher-risk situations (PEPs, correspondent banking, high-risk countries, complex structures, etc.) |
 | **Measures** | Reduced frequency of CDD updates; simplified verification; less intensive monitoring | Additional information obtained; more detailed scrutiny; senior management approval; enhanced ongoing monitoring |
 | **Key principle** | SDD is NOT an exemption from CDD -- it is a reduced application | EDD is NOT a specific checklist -- it means doing MORE to understand and mitigate the higher risk |
-| **Feb 2025 update** | Countries are now **required** to allow and encourage SDD | Remains mandatory for specified higher-risk scenarios |
+| **[Feb 2025 update](https://www.fatf-gafi.org/en/publications/Fatfrecommendations/update-standards-promote-financial-conclusion-feb-2025.html)** | Countries are now **required** to allow and encourage SDD | Remains mandatory for specified higher-risk scenarios |
 
 #### Timing of Verification
 
 - Verification should be completed **before or during** the establishment of the business relationship
 - If necessary to **not interrupt normal business**, verification may be completed **after** establishing the relationship, provided: (a) the ML/TF risk is effectively managed, (b) it occurs as soon as reasonably practicable
-- This flexibility is particularly relevant for **non-face-to-face** relationships (which, per the Feb 2025 update, are no longer automatically categorized as higher risk if proper mitigation is in place)
+- This flexibility is particularly relevant for **non-face-to-face** relationships (which, per the [Feb 2025 update](https://www.fatf-gafi.org/en/publications/Fatfrecommendations/update-standards-promote-financial-conclusion-feb-2025.html), are no longer automatically categorized as higher risk if proper mitigation is in place)
 
 #### Existing Customers
 
@@ -288,7 +306,7 @@ If the FI cannot satisfactorily complete CDD:
 - It should **consider making a suspicious transaction report (STR)**
 - It should **terminate** an existing business relationship
 
-> **Key Exam Point:** R.10/INR.10 is the beating heart of AML compliance. Expect multiple exam questions on: the four CDD elements, when CDD must be applied (especially the USD/EUR 15,000 threshold), beneficial ownership identification, the distinction between SDD and EDD, and the consequences of failing to complete CDD. The Feb 2025 changes promoting proportionality and SDD are likely to appear on recent exams.
+> **Key Exam Point:** R.10/INR.10 is the beating heart of AML compliance. Expect multiple exam questions on: the four CDD elements, when CDD must be applied (especially the USD/EUR 15,000 threshold), beneficial ownership identification, the distinction between SDD and EDD, and the consequences of failing to complete CDD. The [Feb 2025 changes](https://www.fatf-gafi.org/en/publications/Fatfrecommendations/update-standards-promote-financial-conclusion-feb-2025.html) promoting proportionality and SDD are likely to appear on recent exams.
 
 ---
 
@@ -368,6 +386,8 @@ FIs should apply enhanced due diligence measures to cross-border correspondent b
 
 ### Recommendation 14: Money or Value Transfer Services (MVTS) ★
 
+*(CAMS Study Guide, pp. 141-142 -- hawala and informal value transfer; [FATF Recommendations](https://www.fatf-gafi.org/en/publications/Fatfrecommendations/Fatf-recommendations.html))*
+
 **The Recommendation (summarized):**
 Countries must ensure that MVTS providers are **licensed or registered**, and subject to effective monitoring and compliance systems.
 
@@ -384,6 +404,8 @@ Countries must ensure that MVTS providers are **licensed or registered**, and su
 ---
 
 ### Recommendation 15: New Technologies and Virtual Assets/VASPs ★★★
+
+*(CAMS Study Guide, pp. 148-150 -- cryptocurrency and TF; [FATF Recommendations](https://www.fatf-gafi.org/en/publications/Fatfrecommendations/Fatf-recommendations.html))*
 
 **The Recommendation (summarized):**
 Countries and FIs should identify and assess ML/TF risks that may arise in relation to new technologies, and should apply a risk-based approach to managing those risks. Countries should ensure that VASPs are regulated for AML/CFT purposes.
@@ -408,13 +430,15 @@ In June 2019, the FATF amended R.15 and adopted INR.15 to bring **virtual assets
 - **Risk-based supervision** of VASPs is required
 - Competent authorities should have the power to apply **sanctions** for non-compliance
 
-**February 2025 Amendment:** INR.15 was also updated as part of the financial inclusion amendments, with the same proportionality language applied to VA/VASP regulation.
+**[February 2025 Amendment](https://www.fatf-gafi.org/en/publications/Fatfrecommendations/update-standards-promote-financial-conclusion-feb-2025.html):** INR.15 was also updated as part of the financial inclusion amendments, with the same proportionality language applied to VA/VASP regulation.
 
 > **Key Exam Point:** The 2019 VASP amendment to R.15 is a near-certainty on the CAMS exam. Know: the FATF definitions of VA and VASP; that VASPs are subject to the SAME obligations as traditional FIs (CDD, record-keeping, STRs, Travel Rule); and that VASPs must be licensed or registered. The exam may also test the application of the Travel Rule to crypto transactions.
 
 ---
 
 ### Recommendation 16: Wire Transfers / The Travel Rule ★★★
+
+*(CAMS Study Guide, pp. 158-159; [FATF Recommendations](https://www.fatf-gafi.org/en/publications/Fatfrecommendations/Fatf-recommendations.html))*
 
 **The Recommendation (summarized):**
 Countries should ensure that FIs include required and accurate originator information and required beneficiary information on wire transfers and related messages, and that the information remains with the wire transfer throughout the payment chain.
@@ -429,11 +453,13 @@ Countries should ensure that FIs include required and accurate originator inform
 | **Cross-border wire transfers below USD/EUR 1,000** | Name and account number (or unique reference) -- need not be verified unless ML/TF suspicion | Name and account number (or unique reference) |
 | **Domestic wire transfers** | May use account number or unique reference only (full info must be available to beneficiary institution and authorities on request) |
 
-**June 2025 Revision:**
-The FATF revised R.16 in June 2025 to adapt to changes in the payments landscape, including new products, market participants, business models, and messaging standards. Key changes include:
+**[June 2025 Revision](https://www.fatf-gafi.org/en/publications/Fatfrecommendations/update-Recommendation-16-payment-transparency-june-2025.html):**
+The FATF revised R.16 at the [June 2025 Joint FATF-MONEYVAL Plenary](https://www.fatf-gafi.org/en/publications/Fatfgeneral/outcomes-FATF-MONEYVAL-plenary-june-2025.html) to adapt to changes in the payments landscape, including new products, market participants, business models, and messaging standards. Key changes include:
 - Extending the scope to cover **payment intermediaries** and **payment infrastructure providers**
 - For **legal persons**, the name may be supplemented or replaced by a **Legal Entity Identifier (LEI)** or **Business Identifier Code (BIC)**
 - Clarified obligations for different roles in the payment chain
+- Requiring FIs to make use of new technologies to **verify recipients' banking information** (fraud/error prevention)
+- Implementation deadline: **end of 2030**
 
 **Responsibilities by role:**
 
@@ -492,11 +518,13 @@ FIs should apply **enhanced due diligence (EDD)** proportionate to the risks whe
 - Requiring increased supervisory examination for branches/subsidiaries of FIs from the country
 - Requiring increased external audit requirements for FI groups with respect to their operations in the country
 
-> **Key Exam Point:** R.19 is the Recommendation that gives teeth to the FATF's grey list and black list. EDD is required for grey-listed countries based on risk assessment; the FATF explicitly calls for countermeasures against black-listed countries. Know the examples of countermeasures listed in INR.19.
+> **Key Exam Point:** R.19 is the Recommendation that gives teeth to the FATF's [grey list and black list](https://www.fatf-gafi.org/en/countries/black-and-grey-lists.html). EDD is required for grey-listed countries based on risk assessment; the FATF explicitly calls for countermeasures against black-listed countries. Know the examples of countermeasures listed in INR.19. *(CAMS Study Guide, pp. 156-157 -- grey list origins and peer pressure mechanism)*
 
 ---
 
 ### Recommendation 20: Reporting of Suspicious Transactions ★★★
+
+*(CAMS Study Guide, pp. 150-152 -- social media and STR case examples; [FATF Recommendations](https://www.fatf-gafi.org/en/publications/Fatfrecommendations/Fatf-recommendations.html))*
 
 **The Recommendation (summarized):**
 If a financial institution suspects or has reasonable grounds to suspect that funds are the proceeds of a criminal activity or are related to TF, it should be required by law to **report promptly** to the **Financial Intelligence Unit (FIU)**.
@@ -548,6 +576,8 @@ The STR requirements (R.20) and internal controls requirements (R.18) apply to D
 
 ### Recommendation 24: Transparency and Beneficial Ownership of Legal Persons ★★
 
+*([FATF Recommendations](https://www.fatf-gafi.org/en/publications/Fatfrecommendations/Fatf-recommendations.html))*
+
 **The Recommendation (summarized, as revised March 2022):**
 Countries should ensure that adequate, accurate, and up-to-date information on the **beneficial ownership** and control of legal persons can be obtained or accessed in a timely manner by competent authorities.
 
@@ -590,6 +620,8 @@ Countries should ensure that there is adequate, accurate, and timely information
 
 ### Recommendation 26: Regulation and Supervision of Financial Institutions ★★
 
+*(CAMS Study Guide, pp. 154-156 -- supervision and effectiveness assessment; [FATF Recommendations](https://www.fatf-gafi.org/en/publications/Fatfrecommendations/Fatf-recommendations.html))*
+
 **The Recommendation (summarized):**
 Countries should ensure that FIs are subject to adequate AML/CFT regulation and supervision and are effectively implementing the FATF Recommendations.
 
@@ -613,6 +645,8 @@ Countries should ensure that FIs are subject to adequate AML/CFT regulation and 
 ---
 
 ### Recommendation 29: Financial Intelligence Units ★★
+
+*(CAMS Study Guide, pp. 155-156 -- FIU role in effectiveness assessment; [FATF Recommendations](https://www.fatf-gafi.org/en/publications/Fatfrecommendations/Fatf-recommendations.html))*
 
 **The Recommendation (summarized):**
 Countries should establish an **FIU** that serves as a national centre for the receipt and analysis of STRs and other information relevant to ML/TF, and for the dissemination of the results of that analysis.
@@ -671,6 +705,8 @@ Countries should have effective, proportionate, and dissuasive sanctions (crimin
 
 ## 11. The FATF Grey List and Black List
 
+*(CAMS Study Guide, pp. 156-157 -- grey list origins and peer pressure; [FATF Black and Grey Lists](https://www.fatf-gafi.org/en/countries/black-and-grey-lists.html))*
+
 This is one of the most frequently tested FATF topics on the CAMS exam.
 
 ### Formal Terminology
@@ -690,9 +726,11 @@ The **International Cooperation Review Group (ICRG)** is the FATF body responsib
 4. Monitors progress
 5. Recommends listing/de-listing decisions to the FATF Plenary (which meets three times yearly: February, June, October)
 
-### Current Lists (as of February 13, 2026)
+### Current Lists (as of [February 13, 2026](https://www.fatf-gafi.org/en/publications/Fatfgeneral/outcomes-FATF-plenary-february-2026.html))
 
-**Black List -- High-Risk Jurisdictions Subject to a Call for Action (3 jurisdictions):**
+*Note: These lists change at each FATF Plenary (Feb, June, Oct). Always check the [official FATF page](https://www.fatf-gafi.org/en/countries/black-and-grey-lists.html) for the latest version before your exam.*
+
+**[Black List](https://www.fatf-gafi.org/en/publications/High-risk-and-other-monitored-jurisdictions/Call-for-action-february-2026.html) -- High-Risk Jurisdictions Subject to a Call for Action (3 jurisdictions):**
 
 | Jurisdiction | Status | FATF Action |
 |---|---|---|
@@ -700,9 +738,13 @@ The **International Cooperation Review Group (ICRG)** is the FATF body responsib
 | **DPRK (North Korea)** | Continued failure to address significant AML/CFT deficiencies | FATF calls on members to apply **countermeasures**; serious WMD proliferation threats |
 | **Myanmar (Burma)** | Insufficient progress on action plan | Subject to a **call for action**; if no further progress by June 2026, FATF will consider countermeasures |
 
-**Grey List -- Jurisdictions under Increased Monitoring (22 jurisdictions as of Feb 2026):**
+**[Grey List](https://www.fatf-gafi.org/en/publications/High-risk-and-other-monitored-jurisdictions/increased-monitoring-february-2026.html) -- Jurisdictions under Increased Monitoring (22 jurisdictions as of Feb 2026):**
 
-Algeria, Angola, Bolivia, Bulgaria, Cameroon, Cote d'Ivoire, Democratic Republic of the Congo, Haiti, Kenya, Kuwait (added Feb 2026), Lao PDR, Lebanon, Monaco, Namibia, Nepal, Papua New Guinea (added Feb 2026), South Sudan, Syria, Venezuela, Vietnam, Virgin Islands (UK), Yemen
+Algeria*, Angola, Bolivia, Bulgaria, Cameroon, Cote d'Ivoire, Democratic Republic of the Congo, Haiti, Kenya, Kuwait (added Feb 2026), Lao PDR, Lebanon, Monaco, Namibia*, Nepal, Papua New Guinea (added Feb 2026), South Sudan, Syria, Venezuela, Vietnam, Virgin Islands (UK), Yemen
+
+*\* Algeria and Namibia were determined at the Feb 2026 Plenary to have substantially completed their action plans and are awaiting on-site assessments to verify implementation, after which they may be removed.*
+
+**Recent changes (Oct 2025):** Burkina Faso, Mozambique, Nigeria, and South Africa were [removed from the grey list](https://www.fatf-gafi.org/en/publications/Fatfgeneral/outcomes-FATF-plenary-october-2025.html) after completing their action plans.
 
 ### Practical Impact
 
@@ -717,6 +759,8 @@ Algeria, Angola, Bolivia, Bulgaria, Cameroon, Cote d'Ivoire, Democratic Republic
 
 ## 12. The Mutual Evaluation Process
 
+*(CAMS Study Guide, pp. 154-157 -- technical compliance and effectiveness assessments)*
+
 ### What Is a Mutual Evaluation?
 
 A **mutual evaluation** is a comprehensive, peer-reviewed assessment of a country's AML/CFT/CPF framework. It evaluates both **technical compliance** (do the right laws and regulations exist?) and **effectiveness** (are they actually working in practice?).
@@ -725,7 +769,7 @@ A **mutual evaluation** is a comprehensive, peer-reviewed assessment of a countr
 
 | Component | What It Assesses | Rating Scale |
 |---|---|---|
-| **Technical Compliance** | Whether the necessary laws, regulations, and institutional frameworks are in place | **Compliant (C)**, Largely Compliant (LC), Partially Compliant (PC), **Non-Compliant (NC)** |
+| **Technical Compliance** | Whether the necessary laws, regulations, and institutional frameworks are in place | **Compliant (C)**, Largely Compliant (LC), Partially Compliant (PC), **Non-Compliant (NC)**, Not Applicable (NA) |
 | **Effectiveness** | Whether the AML/CFT system is achieving the desired results (11 Immediate Outcomes) | **High (HE)**, Substantial (SE), Moderate (ME), **Low (LE)** |
 
 ### The 11 Immediate Outcomes (Effectiveness)
@@ -748,12 +792,13 @@ A **mutual evaluation** is a comprehensive, peer-reviewed assessment of a countr
 
 | Feature | 4th Round (2013-2023) | 5th Round (2024-present) |
 |---|---|---|
-| **Methodology** | 2013 Assessment Methodology | **2022 Assessment Methodology** |
+| **Methodology** | 2013 Assessment Methodology | [**2022 Assessment Methodology**](https://www.fatf-gafi.org/en/publications/Mutualevaluations/5th-Round-Methodology.html) |
 | **Cycle length** | ~10 years | **~6 years** (significantly shorter) |
 | **Focus** | Balanced technical compliance and effectiveness | **Greater emphasis on effectiveness**, major risks and context |
 | **Follow-up** | Structured follow-up process | **Results-oriented follow-up** |
 | **CPF** | Limited CPF assessment | **Enhanced CPF assessment** (IO.11 expanded) |
 | **Immediate Outcomes** | 11 IOs | 11 IOs (but with updated 2022 methodology criteria) |
+| **First assessments** | N/A | Belgium and Malaysia (adopted Oct 2025; published Dec 2025); Austria, Italy, Singapore (adopted Feb 2026) |
 
 > **Key Exam Point:** The mutual evaluation is the enforcement mechanism of the FATF system. Countries that perform poorly can be grey-listed. Know the two components (technical compliance + effectiveness), understand that a country can have good laws (compliant) but poor implementation (low effectiveness), and be aware that the 5th Round began in 2024 with a shorter cycle and greater emphasis on real-world results.
 
@@ -761,7 +806,9 @@ A **mutual evaluation** is a comprehensive, peer-reviewed assessment of a countr
 
 ## 13. Recent Updates -- Critical for Current Exams
 
-### February 2025: Financial Inclusion Amendments
+### [February 2025: Financial Inclusion Amendments](https://www.fatf-gafi.org/en/publications/Fatfrecommendations/update-standards-promote-financial-conclusion-feb-2025.html)
+
+Source: [FATF Plenary Outcomes, February 2025](https://www.fatf-gafi.org/en/publications/Fatfgeneral/outcomes-fatf-plenary-february-2025.html) | [Public Consultation (Oct 2024)](https://www.fatf-gafi.org/en/publications/Fatfrecommendations/R1-INR1-INR10-INR15-Public-Consultation-Oct-24.html)
 
 | Change | Detail |
 |---|---|
@@ -781,13 +828,17 @@ A **mutual evaluation** is a comprehensive, peer-reviewed assessment of a countr
 | **2021 Updated Guidance** | Clarified VA/VASP definitions, stablecoin treatment, peer-to-peer risks |
 | **Ongoing implementation gap** | As of 2025, many jurisdictions have still not fully implemented R.15 for VASPs |
 
-### June 2025: R.16 Revision (Payment Transparency)
+### [June 2025: R.16 Revision (Payment Transparency)](https://www.fatf-gafi.org/en/publications/Fatfrecommendations/update-Recommendation-16-payment-transparency-june-2025.html)
+
+Source: [Joint FATF-MONEYVAL Plenary Outcomes, June 2025](https://www.fatf-gafi.org/en/publications/Fatfgeneral/outcomes-FATF-MONEYVAL-plenary-june-2025.html) | [Second Public Consultation (Feb 2025)](https://www.fatf-gafi.org/en/publications/Fatfrecommendations/R16-public-consultation-February-2025.html) | [Explanatory Note (PDF)](https://www.fatf-gafi.org/content/dam/fatf-gafi/recommendations/Explanatory%20note%20for%20revised%20R.16.pdf.coredownload.pdf)
 
 | Change | Detail |
 |---|---|
 | **Extended scope** | Now covers payment intermediaries and payment infrastructure providers |
 | **Legal entity identification** | LEI and BIC recognized as acceptable identifiers for legal persons |
+| **Fraud/error prevention** | FIs required to use technologies to verify recipients' banking information |
 | **Adapted to modern payments** | Reflects evolution of payment business models, products, and technologies |
+| **Implementation deadline** | Changes come into effect by end of **2030** |
 
 ### March 2022: R.24 Revision (Beneficial Ownership)
 
@@ -899,4 +950,16 @@ The CAMS exam covers four main domains. Here is how the FATF Recommendations map
 
 ---
 
-*This reference guide is current as of March 2026 and reflects FATF Standards updated through October 2025, including the February 2025 financial inclusion amendments and the June 2025 R.16 revision. For the definitive text, always consult the official FATF website: [fatf-gafi.org](https://www.fatf-gafi.org). The CAMS exam tests your understanding of the principles behind these standards, not verbatim memorization of Interpretive Note paragraphs.*
+*This reference guide is current as of March 2026 and reflects FATF Standards updated through October 2025, including the [February 2025 financial inclusion amendments](https://www.fatf-gafi.org/en/publications/Fatfrecommendations/update-standards-promote-financial-conclusion-feb-2025.html) and the [June 2025 R.16 revision](https://www.fatf-gafi.org/en/publications/Fatfrecommendations/update-Recommendation-16-payment-transparency-june-2025.html). Grey/black list data reflects the [February 2026 Plenary](https://www.fatf-gafi.org/en/publications/Fatfgeneral/outcomes-FATF-plenary-february-2026.html). For the definitive text, always consult the official FATF website: [fatf-gafi.org](https://www.fatf-gafi.org). The CAMS exam tests your understanding of the principles behind these standards, not verbatim memorization of Interpretive Note paragraphs.*
+
+### Key FATF Source URLs
+
+| Resource | URL |
+|---|---|
+| FATF 40 Recommendations (full text) | [fatf-gafi.org/en/publications/Fatfrecommendations/Fatf-recommendations.html](https://www.fatf-gafi.org/en/publications/Fatfrecommendations/Fatf-recommendations.html) |
+| Black and Grey Lists (current) | [fatf-gafi.org/en/countries/black-and-grey-lists.html](https://www.fatf-gafi.org/en/countries/black-and-grey-lists.html) |
+| Plenary Outcomes (all meetings) | [fatf-gafi.org/en/the-fatf/outcomes-of-meetings.html](https://www.fatf-gafi.org/en/the-fatf/outcomes-of-meetings.html) |
+| Feb 2025 Financial Inclusion Amendments | [fatf-gafi.org/.../update-standards-promote-financial-conclusion-feb-2025.html](https://www.fatf-gafi.org/en/publications/Fatfrecommendations/update-standards-promote-financial-conclusion-feb-2025.html) |
+| June 2025 R.16 Revision | [fatf-gafi.org/.../update-Recommendation-16-payment-transparency-june-2025.html](https://www.fatf-gafi.org/en/publications/Fatfrecommendations/update-Recommendation-16-payment-transparency-june-2025.html) |
+| 5th Round Mutual Evaluation Methodology | [fatf-gafi.org/.../5th-Round-Methodology.html](https://www.fatf-gafi.org/en/publications/Mutualevaluations/5th-Round-Methodology.html) |
+| Mutual Evaluations Topic Page | [fatf-gafi.org/en/topics/mutual-evaluations.html](https://www.fatf-gafi.org/en/topics/mutual-evaluations.html) |
